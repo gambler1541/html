@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>스크롤되어 움직이는 글자 만들기 - MARQUEE</title>
+ </head>
+ <body>
+
+	MARQUEE 1 - 옵션을 사용하지 않음 <br><br>
+	<MARQUEE>
+	옵션을 사용하지 않은 기본적인 MARQUEE
+	</MARQUEE>
+	<br><br>
+	MARQUEE 2 - width, height, bgcolor<br><br>
+	<MARQUEE width = "500" height = "30" bgcolor = "#77cc77">
+	가로 500, 세로 30, 배경 색상 #77cc77
+	</MARQUEE>
+	<br><br>
+	MARQUEE 3 - behavior는 alternate <br><br>
+	<MARQUEE behavior = "alternate">
+	좌우로 왔다 갔다 하는 alternate behavior
+	</MARQUEE>
+	<br><br>
+	MARQUEE 4 - behavior는 slide<br><br>
+	<MARQUEE behavior = "slide">
+	움직이다가 멈추는 slide behavior
+	</MARQUEE>
+	<br><br>
+	MARQUEE 5- direction사용, 왼쪽에서 오른쪽 방향으로 움직이게하기<br><br>
+
+	<MARQUEE direction="right">
+	오른쪽 방향으로 움직여 볼까요?
+	<br><br>
+	</MARQUEE>
+	<br><br>
+	MARQUEE 6 - loop 사용, 3번 반복<br><br>
+	<MARQUEE loop = "3">
+	3번만 움직여 볼까요?
+	</MARQUEE>
+	<br><br>
+	MARQUEE - 7 scrollmount 와 scrolldelay 사용  <br><br>
+	<MARQUEE scrollmount="1" scrolldelay="100">
+	scollmount는 움직이게 되는 길이를 픽셀 단위로 지정하며,
+	scrolldelay는 움직일 속도를 지정합니다.
+	지금은 scrollmount는 1, scrolldelay는 100입니다.
+	</MARQUEE>
+ </body>
+</html>
