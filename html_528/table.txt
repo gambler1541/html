@@ -1,0 +1,34 @@
+. Table
+
+<tabel> 표 전체를 담는 컨테이너
+<caption> 표 제목 (반드시 table 태그의 첫 번째 기술)
+<thead> 헤딩 셀 그룹
+<tfoot>  바닥 셀 그룹
+<tbody> 데이터 셀 그룹
+<tr> 행, 여러개의 <td> or <th> 포함
+<th> 제목(head) 셀
+<td> 데이터 셀
+
+<caption>, <thead>, <tbody>, <tfoot> 태그를 사용하지 않고 <tr>, <td> 태그로만
+테이블 표를 만드는 경우가 있는데 이는 바람직 하지 않다. 
+검색 엔진은 표의 의미(시멘틱)를 파악하기 위해 <catpion>, <thead>, <tbody>, <tfoot>태그를
+찾기 때문이다.
+
+.table 속성
+
+테이블의 디자인을 바꿀 수 잇는 방법은 다양한 방법이 있습니다.
+
+1. border 속성은 테이블의 테두리를 설정해주는 속성입니다.
+	ex (border ="1")숫자가 높을수록 테두리가 두꺼워집니다.
+
+2. bordercolor는 테두리의 색상을 지정하는 속성입니다.
+	ex (bordercolor="blue") default값은 검정색입니다.
+
+3. width 와 height는 테이블의 크기를 결정해주는 속성입니다.
+	ex (width ="50px" height ="100%")픽셀 단위로 크기, 비율을 줄 수 있습니다.
+
+4. aliign은 테이블안에있는 값들을 정렬시키는 기능입니다.
+
+5. bgcolor속성으로 원하는 태그의 배경색을 지정해줄 수 있습니다.
+
+6. colspan, rowspan은 셀을 합병(행/열)시키는 기능을 합니다.
