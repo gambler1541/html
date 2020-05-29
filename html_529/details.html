@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>details와 summary 태그</title>
+ </head>
+ <body>
+	<h3> details와 summary태그</h3>
+	Q &amp; A 라스트
+	<hr>
+	<!-- deatils요소는 html5에 새롭게 추가된 요소로서
+	세부사항(details)을 표시한다.
+	이 요소를 사용하면 세부사항을 선택적으로 보여줄 수 있다.
+	사용자가 요약(summary)을 선택하면 숨겨져 잇던 세부사항이 나타나도록 구성하는 기법인데 W3C에서는 디스클로저 위젯(diclosure widget)이라고 부르고 있다. -->
+
+	<details>
+		<summary>Question 1</summary>
+		<p>웹 개발자가 알아야 하는 언어 3가지</p>
+	</details>
+	<!-- 
+	summary 요소는 요약(summary)을 표시한다.
+	여기에서의 요약은 details요소로 제공되는 세부사항에
+	대한 요약 또는 제목을 의미한다.
+
+	"요약-세부"라는 관계를 제대로 전달하기 위해서는
+	details 요소 다음에 곧바로 summary요소가 이어져야 한다.
+	-->
+
+	<details>
+		<summary>Answer 1</summary>
+		<p>HTML5 CSS Javascript</p>
+	</details>
+
+ </body>
+</html>
