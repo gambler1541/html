@@ -1,0 +1,12 @@
+. inline style sheet
+
+inline style sheet는 HTML 태그의 style 속성에 css 코드를 넣어 적용시키는 방법입니다.
+
+예 =>
+
+	<p style ="color : blue">
+		Lorem ipsum dolor.
+	</p>
+
+해당 태그(p)가 선택자(select)가 되고, css코드에는 속성(property)과 값(value)만 들어갑니다.
+따라서 꾸미는 데 한계가 있으며, 재사용이 불가능하다는 단점이 있습니다.
