@@ -20,5 +20,5 @@ h1 {
 
 <link rel="stylesheet" href="css/style.css">
 
-이 방법의 장점은 여러 HTML  문서에 사용할 수 있다는 것입니다.
+이 방법의 장점은 여러 HTML  문서에사용할 수 있다는 것입니다.
 style.css를 적용시키고 싶은 문서에 <link>태그로 연결만 해주면 됩니다.

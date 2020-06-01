@@ -18,3 +18,4 @@ h1, color, red 세 개의 단어가 있는데 각각 선택자, 속성, 값이�
 selector{ property : value}
 
 이때 property와 value를 합쳐서 선언(declaration)이라고 합니다.
+
