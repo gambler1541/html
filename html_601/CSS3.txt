@@ -29,3 +29,4 @@ CSS를 CSS 레벨 3이라고 부르는데, CSS 버전 3 이라고 부르지 않�
 
 . linking style sheet
 	별도의 css 파일을 만들고 html 문서와 연결하는 방법입니다.
+

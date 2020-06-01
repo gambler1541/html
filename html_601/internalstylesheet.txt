@@ -1,0 +1,16 @@
+. internar style sheet
+
+internal style sheet은 HTML 문서안에 스타일 코드를 넣는 방법입니다.
+
+<style> 과 </style> 안에 css 코드를 넣습니다.
+
+예=>
+<style>
+h1 { 
+	color : blue;
+	}
+</style>
+
+<style>태그는 보통 <head> 와 </head>사이에 넣으나, HTML 문서의 어디에 넣어도 잘 적용됩니다.
+이 방법은 HTML문서 안의 여러 요소를 한번에 꾸밀 수 있다는 장점이 있으나, 또 다른 HTML 문서에는 적용할 수 없다는
+단점이 있습니다.
