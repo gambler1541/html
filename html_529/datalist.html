@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>데이터 목록을 가진 텍스트 입력</title>
+ </head>
+ <body>
+	<h3> 가보고 싶은 곳</h3>
+	<hr>
+	<form>
+	나라 : <input type="text" name="country" list="countries"><br>
+		<datalist id="countries">
+			<option value="가나">
+			<option value="스위스">
+			<option value="브라질">
+		</datalist>
+	<!-- 
+	<datalist>태그는 <input>에서 사용하기 위한 옵션들의 리스트를 미리 정의할 때 사용합니다.
+
+	<datalist> 요소는 사용자가 <input>요소에 데이터를 입력할 때 미리 정의된 옵션을 드롭다운 리스트로 보여줌으로써 자동완성 기능을 제공합니다.
+
+	<input> 요소의 list 속성값으로 <detalist>요소의 id 속성값을 명시하면, 해당 <datalist> 요소에서 미리 정의한 옵션들을slaem <input> ㅇ소에서 사용할 수 있습니다.
+	-->
+	
+	보고 싶은것 : <input type="text" list="what"><br>
+	<datalist id= "what">
+		<option value="산">
+		<option value="바다">
+		<option value ="도시">
+	</datalist>
+	</form>
+ </body>
+</html>

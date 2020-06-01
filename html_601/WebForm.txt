@@ -1,0 +1,35 @@
+. HTML5 문서 구조화와 웹 폼
+
+. 텍스트 일부를 마크업하는 HTML5 시멘틱 태그
+
+. <mark> : 중요한 텍스트임을 표시
+. <time> : 시간 정보임을 표시
+. <meter> : 주어진 범위나 %의 데이터량을 표시
+. <progress> : 작업의 진행 정도를 표시
+
+. 웹 폼과 폼 요소
+
+: 웹 페이지를 통해 사용자 입력을 받는 폼을 Webform(웹폼) 혹은 form(폼)이라고 합니다.
+
+HTML5 에서는 <input>, <textarea>, <select> 등 폼을 만들기 위한 다양한 태그들을
+제공하며 이 태그들은 form element(폼 요소)라고 부릅니다. 폼은 로그인, 등록 검색, 예약
+쇼핑 등의 다양한 웹 서비스에서 사용자의 입력을 받기 위해 사용합니다.
+
+. 폼만들기
+
+ 폼 요소						의미
+
+<input type="text">			한줄 텍스트 입력  창
+<input type="password">		암호 입력을 위한 한줄 텍스트 입력창
+<input type="button">			단순 버튼
+<input type="submit">			웹 서버로 폼데이터를 전송시키는 버튼
+<input type="reset">			입력된 폼 데이터를 초기화 시키는 버튼
+<input type="image">			이미지 버튼
+<input type="checkboxradio">	체크박스와 라디오 버튼
+<select>						드롭다운 리스트를 가진 콤보 박스
+<input type="month|week|date|time|datetime-local"> 년,월,일시간 등의 시간 정보 입력창
+<input type="number|range">	스핀 버튼과 슬라이드 바로 편리한 숫자  입력 창
+<input type="color">			색 입력을 쉽게하는 컬러 다이어그램
+<input type="file">			로컬 컴퓨터의 파일을 선택하는 폼 요소
+<input type="button|reset|submit">	단순버튼,reset,submit 버튼
+<textarea>					여러줄의 텍스트 입력창
