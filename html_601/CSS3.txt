@@ -16,3 +16,16 @@ CSS를 CSS 레벨 3이라고 부르는데, CSS 버전 3 이라고 부르지 않�
 	. 리스트
 	. 테이블
 	. 사용자 인터페이스
+
+
+. HTML에 CSS를 적용시키는 방법은 세가지가 잇습니다.
+각 방법은 장단점이 잇으니 상황에 맞게 적절한 방법을 택합니다.
+
+. inline style sheet
+	HTML 태그의 style속성에 css 코드를 넣는 방법입니다.
+
+. interner style sheet
+	html 문서 안의 <style>과 </style>안에 css 코드를 넣는 방법입니다.
+
+. linking style sheet
+	별도의 css 파일을 만들고 html 문서와 연결하는 방법입니다.
