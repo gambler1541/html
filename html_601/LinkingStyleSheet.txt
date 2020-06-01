@@ -1,0 +1,24 @@
+. Linking Style Sheet
+
+Linking Style Sheet는 별도의 CSS 파일을 만들고 HTML 문서와 연결하는 방법입니다.
+
+예를 들어 모든 h1 요소의 글자를 빨간색으로 하고 싶다면, 다음의 내용으로 style.css파일을 만듭니다.
+(CSS 파일의 확장자는 css입니다.)
+
+h1 { 
+	color: red;
+}
+
+적용을 원하는 HTML 문서에 다음의 코드를 추가합니다.
+
+<link rel="stylesheet" href="style.css">
+
+위 코드는 HTML 파일과 CSS 파일이 같은 폴더에 있다고
+가정했을 때의 코드로, 경로는 적절히 수정해야 합니다.
+예를 들어 HTML 문서가 있는 폴더에 css 폴더가 있고,
+그 안에 style.css 파일이 있다면 다음과 같이 합니다.
+
+<link rel="stylesheet" href="css/style.css">
+
+이 방법의 장점은 여러 HTML  문서에 사용할 수 있다는 것입니다.
+style.css를 적용시키고 싶은 문서에 <link>태그로 연결만 해주면 됩니다.
