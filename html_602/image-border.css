@@ -1,0 +1,11 @@
+p{
+	background : yellow;
+	width : 200px;
+	height : 60px;
+	padding : 10px;
+	border : 20px solid lightgray; /* border-width와 border-style 동시 지정 */
+	}
+
+	#round { border-image : url("../images/border.png") 30 round;}
+	#repeat { border-image : url("../images/border.png") 30 repeat;}
+	#stretch { border-image : url("../images/border.png") 30 stretch;}

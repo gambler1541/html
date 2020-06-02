@@ -1,0 +1,15 @@
+		p.crosshair{
+			cursor : crosshair;
+		}
+		p.help{
+			cursor : help;
+		}
+		p.pointer{
+			cursor : pointer;
+		}
+		p.progress{
+			cursor : progress;
+		}
+		p.resize{
+			cursor : n-resize;
+		}

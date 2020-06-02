@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>텍스트 그림자</title>
+  <style>
+	div {
+		font : normal 34px verdana;
+	}
+
+	.dropText{
+		text-shadow : 3px 3px;
+	}
+
+	.redText {
+		text-shadow : 3px 3px red;
+	}
+
+	.blurText {
+		text-shadow : 3px 3px 5px skyBlue;
+	}
+
+	.glowEffect{
+		text-shadow : 0px 0px 3px red;
+	}
+
+	.wordArtEffect{
+		color : white;
+		text-shadow : 0px 0px 3px darkBlue;
+	}
+
+	.threeDEffect{
+		color : white;
+		text-shadow : 2px 2px 4px black;
+	}
+
+	.multiEffect{ /* 3개의 효과 동시 적용 */
+		color : yellow;
+		text-shadow : 2px 2px 2px black,
+		0 0 25px blue,
+		0 0 5px darkblue;
+	}
+
+	/* 
+	text-shadow : offset-x offset-y blur-radius color | none | initail | inherit
+	offset - x : 그림자의 수평 거리를 정합니다. (필수)
+	offset - y : 그림자의 수직 거리를 정합니다. (필수)
+	blur-radius : 흐림 정도를 정합니다.(선택: 값을 정하지 않으면 0)
+	color : 색을 정합니다.(선택 : 값을 정하지 않으면 브라우저 기본값)
+	none : 그림자 효과를 업앱니다.
+	initail : 기본값으로 설정합니다.
+	inherit : 부모 요소의 속성값을 상속받습니다.
+	*/
+  </style>
+ </head>
+ <body>
+	<h3> 텍스트 그림자 만들기 </h3>
+	<hr>
+	<div class = "dropText"> Drop Shadow</div>
+	<div class = "redText"> Color Shadow</div>
+	<div class = "blurText"> Blur Shadow</div>
+	<div class = "glowEffect"> Glow Effect</div>
+	<div class = "wordArtEffect"> WordArt Effect</div>
+	<div class = "threeDEffect"> 3D Effect</div>
+	<div class = "multiEffect"> Multiple Shadow Effect</div>
+ </body>
+</html>
