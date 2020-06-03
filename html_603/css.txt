@@ -37,3 +37,14 @@ display : 박스 유형 제어
 	. 블럭 박스 : display  : block;
 	. 인라인 박스 : display : inline;
 	. 인라인 블럭 박스 : display : inline-block;
+
+
+display : block						display : inline				display : inline-block
+	
+항상 새라인에서 시작						새라인에서 시작 못함				새라인에서 시작 못함	
+블럭 박스 내에만 배치						라인 안(inline)에 있음			라인 안(inline)에 있음
+옆에 다른 요소 배치 불가능					모든 박스내 배치 가능				모든 박스내 배치 가능
+width,height로 크기 조절					옆에 다른 요소 배치가능			옆에 다른 요소 배치 가능
+padding, border, margin 조절가능			width,height로 조정불가능		width, height로 조정가능
+									margin-top, margin-bottom		padding,borders, margin 조절가능
+									조절 가능
