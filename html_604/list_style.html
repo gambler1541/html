@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>List style</title>
+  <style>
+	ul {
+		background : #0f0fb610;
+		list-style : none;
+		text-align : center;
+		border-top : 1px solid blue;
+		border-bottom : 1px solid green;
+		padding-top: 30px;
+		padding-bottom : 30px;
+	}
+
+	ul li {
+		display : inline;
+		text-transform : uppercase;
+		padding : 0 10px;
+		letter-spacing : 10px;
+	}
+
+	ul li a {
+		text-decoration : none;
+		color : black;
+	}
+	
+	ul li a:hover {
+		text-decoration : underline;
+	}
+	.red:hover{
+		background : red;
+	}
+	.orange:hover{
+		background : orange;
+	}
+	.yellow:hover{
+		background : yellow;
+	}
+	.green:hover{
+		background : green;
+	}
+	
+  </style>
+ </head>
+ <body>
+	<ul>
+		<li><a href="#" class="red">Home</a></li>
+		<li><a href="#" class="orange">Blog</a></li>
+		<li><a href="#" class="yellow">About</a></li>
+		<li><a href="#" class="green">Contact</a></li>
+ </body>
+</html>
