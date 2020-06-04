@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> 표 응용 </title>
+  <style>
+	table {
+		border-collapse : collapse;
+	}
+
+	td,th{
+		text-align : left;
+		padding : 5px;
+		height : 15px;
+		width : 100px;
+	}
+
+	thead, tfoot{
+		background : darkgray;
+		color : yellow;
+	}
+
+	tbody tr:nth-child(even){ /* 짝수 <tr>에 적용 */
+		background : blue;
+	}
+	tbody tr:nth-child(odd){ /* 짝수 <tr>에 적용 */
+		background : yellow;
+	}
+	tbody tr:nth-child(odd){ /* 짝수 <tr>에 적용 */
+		background : yellow;
+	}
+tbody tr:hover{/* 마우스가 올라오면 pink 배경 */
+		background : pink;	
+		}
+  </style>
+ </head>
+ <body>
+	<h3> 1학년 성적 </h3>
+	<hr>
+	<table>
+		<thead>
+			<tr><th>이름</th><th>HTML</th><th>CSS</th></tr>
+		</thead>
+		<tfoot>
+			<tr><th>합</th><th>310</th><th>249</th></tr>
+		</tfoot>
+		<tbody>
+			<tr><td>고유탁</td><td>80</td><td>70</td></tr>
+			<tr><td>김기우</td><td>95</td><td>99</td></tr>
+			<tr><td>김남혁</td><td>85</td><td>90</td></tr>
+			<tr><td>김민준</td><td>50</td><td>40</td></tr>
+		</tbody>
+	</table>
+ </body>
+</html>
