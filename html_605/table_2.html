@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>table</title>
+  <style>
+	table {
+		border-collapse : collapse;
+	}
+
+	td, th {
+		text-align : left;
+		padding : 5px;
+		height : 15px;
+		width : 100px;
+	}
+
+	thead, tfoot {
+		background : darkgray;
+		color : yellow;
+	}
+
+	tbody tr:nth-child(odd){
+		background : aliceblue;
+	}
+
+  </style>
+ </head>
+ <body>
+	<h3> 2학기 성적 </h3>
+	<hr>
+	<table>
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>HTML</th>
+				<th>CSS</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>합</th>
+				<th>310</th>
+				<th>249</th>
+			</tr>
+		<tfoot>
+		<tbody>
+			<tr>
+				<td>수선화</td>
+				<td>80</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td>백일홍</td>
+				<td>95</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td>들국화</td>
+				<td>85</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td>패랭이</td>
+				<td>50</td>
+				<td>40</td>
+			</tr>
+		</tbody>
+ </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>:hover form style</title>
+  <style>
+	input[type=text]{
+		color : green;
+	}
+
+	input[type=text]:hover{
+		background : yellow;
+		border : 2px solid skyblue;
+		border-radius : 5px;
+	}
+
+	input[type=address]{
+		color : blue;
+	}
+
+	input[type=address]:hover{
+		background : red;
+		border : 2px solid skyblue;
+		border-radius: 5px;
+	}
+  </style>
+ </head>
+ <body>
+	<form>
+
+		<label> 이름 : <input type ="text" placeholder = "Korea"></label>
+
+		<label> 주소 : <input type ="address" placeholder ="주소입력"></label>
+	
+	</form>
+ </body>
+</html>
