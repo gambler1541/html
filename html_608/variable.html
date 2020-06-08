@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>지역변수와 전역변수</title>
+   <style>
+
+  </style>
+ </head>
+ <body>
+	<h3> 지역 변수와 전역 변수</h3>
+	<hr>
+	 <script>
+	var x = 100;
+
+	function f(){ // 함수 f() 선언
+		var x =1; // 지역변수
+		document.write("지역변수 x = " + x);
+		document.write("<br>");
+		document.write("전역변수 x = " + this.x);
+	}
+	f();
+  </script>
+ </body>
+</html>
