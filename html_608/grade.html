@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>if -else 문</title>
+  <style>
+
+  </style>
+ </head>
+ <body>
+	<h3>if - else를 이용한 학점 매기기</h3>
+	<hr>
+	<script>
+		var grade;
+		var score = prompt("수선화님 점수를 입력하세요", 100);
+		score = parseInt(score); // 문자열을 숫자로 바꿈
+
+		if(score >= 90) // score가 90 이상
+			grade = "A";
+		else if(score >= 80) // 80이상 90미만
+			grade = "B";
+		else if(score >= 70) // 70이상 80미만
+			grade = "C";
+		else if(score >= 60) // 60이상 70미만
+			grade = "D";
+		else
+			grade = "F";
+		document.write(score + "는" + grade + "입니다.<br>")
+  </script>
+ </body>
+</html>
