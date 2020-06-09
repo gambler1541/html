@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>do-while 과 break 사용</title>
+  
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> 암호를 입력하라! </h3>
+ <hr>
+ <script>
+	var password = "";
+	var str = "";
+	var count = 0;
+	do
+	{
+		count ++;
+		if (count >= 5)
+		{
+			str ="암호 시도 횟수가 5번을 초과하였습니다.<br>" + 
+			"나중에 다시 시도 하시요 !";
+			console.log(str);
+			break;
+		}
+		password = prompt("암호를 대라", "암호");
+		if (password == "korea")
+		{
+			str = "반갑습니다. <br> 통과!";
+			break;
+		}
+	}
+	while (true);
+	document.write(str);
+ </script>
+  
+ </body>
+</html>
