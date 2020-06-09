@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>document.write() 사용</title>
+
+  <style>
+
+  </style>
+ </head>
+ <body>
+   <script>
+		document.write("<h3>document.write()로 표 만들기 </h3>");
+		document.write("<hr>");
+		document.write("<table border='1'>");
+		document.write("<tr>");
+		document.write("<th>");
+		document.write("n");
+		document.write("</th>");
+		
+		for (j = 0; j < 10 ; j++ )
+		{
+			document.write("<td>");
+			document.write(" " + j + " ");
+			document.write("</td>");
+		}
+		document.write("</tr><tr>");
+		document.write("<th>");
+		document.write("n<sup>2</sup>");
+		document.write("</th>");
+		
+		for (j = 0; j < 10 ; j++ )
+		{
+			document.write("<td>");
+			document.write(j * j);
+			document.write("</td>");
+		}
+		document.write("</tr>");
+			document.write("</tr><tr>");
+		document.write("<th>");
+		document.write("n<sup>3</sup>");
+		document.write("</th>");
+		
+		for (j = 0; j < 10 ; j++ )
+		{
+			document.write("<td>");
+			document.write(j * j * j);
+			document.write("</td>");
+		}
+		document.write("</tr>");
+		document.write("</table>");
+		document.write("</table>");
+  </script>
+ </body>
+</html>
