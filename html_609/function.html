@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Function</title>
+  <script>
+	function adder(a, b){
+		var sum;
+		sum = a + b;
+		return sum;
+	}
+	function sub(a, b){
+		var sub;
+		sub = a - b;
+		return sub;
+	}
+	function mul(a,b){
+		var mul;
+		mul = a * b;
+		return mul;
+	}
+	function div(a, b){
+		var div;
+		div = a / b;
+		return div;
+	}
+	function mod(a,b){
+		var mod;
+		mod = a % b;
+		return mod;
+	}
+
+	/*
+		function : 함수 선언을 표시하는 키워드
+
+		adder : 함수 이름
+
+		(a, b) : 함수를 호출하는 곳으로 부터 값을 받는 매개변수
+
+		return : 함수의 실행을 종료하고 호출한 곳으로 값을 되돌려줌(함수종료)
+	*/ 
+  </script>
+  <style>
+  </style>
+ </head>
+ <body>
+ <h3> Function </h3>
+ <hr>
+  <script>
+	var n = adder(24567,98374);
+	document.write("24567 + 98374 = " + n + "<br>");
+	var s = sub(456,234);
+	document.write("456 - 234 = " + s + "<br>");
+	var m = mul(10, 2);
+	document.write("10 * 2 = " + m + "<br>");
+	var d = div(10, 2);
+	document.write("10 / 2 = " + d + "<br>");
+	var m1 = mod(10, 2);
+	document.write("10 % 2 = " + m1 + "<br>");
+
+  </script>
+ </body>
+</html>

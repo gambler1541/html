@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Do ~ while</title>
+  <style>
+
+  </style>
+ </head>
+ <body>
+	<h3> Do~ While </h3>
+	<hr>
+	<script>
+		var n = prompt("0보다 큰 점수를 입력하세요", 0);
+		n = parseInt(n);
+
+		var i = 0, sum = 0, odd =0, even=0;
+		do
+		{
+			sum += i;
+			if (i % 2 == 0)
+			{
+				even += i;
+			}
+			else
+			{
+				odd += i;
+			}
+			i ++;
+
+		}
+		while (i <= n);
+		document.write("0에서 " + n + "까지의 합은 "+ sum + "<br>");
+		document.write("0에서 " + n + "까지의 짝수 합은 "+ even + "<br>");
+		document.write("0에서 " + n + "까지의 홀수 합은 "+ odd);
+	</script>
+ </body>
+</html>

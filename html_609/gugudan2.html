@@ -1,0 +1,39 @@
+<script>
+ function gugudan(n, m) { //함수 작성
+    var n = parseInt(n); //문자열 n을 숫자로 바꿈
+    var m = parseInt(m); //문자열 m을 숫자로 바꿈
+    if (isNaN(m) || m < 1 || m > 9)
+    {
+       alert("잘못 입력하셨습니다");
+       return;
+    }
+    
+    if (n > m)
+    {
+       var temp = n;
+       n = m;
+       m = temp;
+    }
+
+    for (var j = n; j <= m; j++)
+    {
+       for (var i = 1; i <= 9; i++) //i는 1~9까지 반복
+        {
+           document.write(j + "x" + i + " = " + j*i + "<br>");
+        }
+       document.write("<hr>");
+    }
+ }
+ </script>
+ </head>
+ <body>
+ <h3>구구단 출력 함수 만들기</h3>
+ <hr>
+ <script>
+ var n = prompt("구구단 몇 단을 출력할까요? : ", ""); //n은 문자열
+ var m = prompt("구구단 몇 단을 출력할까요? : ", ""); //m은 문자열
+
+ gugudan(n,m); //함수 호출
+ </script>
+ <body>
+ </html>

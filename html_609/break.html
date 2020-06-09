@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>break 문</title>
+  <style>
+  </style>
+ </head>
+ <body>
+ <h3>break 문 </h3>
+ <hr>
+  <script>
+	var i = 0, sum = 0;
+	while (true) // 무한 반복
+	{
+		sum += i;
+		if (sum > 300)
+		{
+			break;
+		}
+		i ++; 
+	}
+	document.write(i + "까지 더하면 300을 넘음 :  " + sum);
+  </script> 
+ </body>
+</html>
