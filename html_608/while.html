@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>While 문</title>
+  <style>
+
+  </style>
+ </head>
+ <body>
+	<h3>while 문으로 0에서 n까지 합</h3>
+	<hr>
+	<script>
+		var n = prompt("0보다 큰 정수를 입력하세요", 0);
+		n = parseInt(n); // 문자열을 숫자로 바꿈
+
+		var i = 0, sum =0, odd=0, even=0;
+		while(i<=n) { //i가 0에서 n까지 반복
+			sum += i;
+			if (i % 2 == 0)
+			{
+				even += i;
+			}
+			else{
+				odd += i;
+			}
+			i ++;
+		}	
+		document.write("0에서 " + n + " 까지의 합은 " + sum+"<br>");
+		document.write("짝수 합 : " + even + "<br>");
+		document.write("홀수 합 : " + odd);
+
+	</script>
+ </body>
+</html>
