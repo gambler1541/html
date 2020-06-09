@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>innerHTML</title>
+  <script>
+	function testinnerHTML(){
+		var str ="";
+		str += "<table bgcolor='#cccc66'>";
+		str += "<tr>";
+		str += "<td>";
+		str += "HTML태그를 삽입할 수 있습니다.";
+		str += "</td>";
+		str += "</tr>";
+		str += "</table>";
+
+		document.getElementById("inHere").innerHTML = str;
+	}
+	function testinnerHTML2(){
+		var str ="";
+		str += "<table bgcolor='#cccc66'>";
+		str += "<tr>";
+		str += "<td>";
+		str += "HTML태그를 삽입할 수 있습니다.";
+		str += "</td>";
+		str += "</tr>";
+		str += "</table>";
+
+		document.getElementById("inHere2").innerHTML = str;
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> innerHTML 사용</h3>
+ <hr>
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+			<input type="button" name="btn" value="클릭 시 innerHMTL 출력" onclick="javascript:testinnerHTML();">
+			<div id ="inHere"></div>
+			<input type="button" name="btn2" value="클릭 시 innerHTML 출력" onclick="testinnerHTML2();">
+			<div id ="inHere2"></div>
+		</td>
+	</tr>
+</table>
+ </body>
+</html>
