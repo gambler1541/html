@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>인코딩과 디코딩</title>
+  <script>
+	function ex1(){
+		alert(encodeURI('가나다')+"\n"+decodeURI('%EA%B0%80%EB%82%98%EB%8B%A4'));
+
+		// encode -> 코드화 = 암호화
+		// decode -> 역 코드화 = 복호화
+	}
+	
+	function ex2(){
+		var x = 10, y=15;
+		alert(String(x)+String(y));
+	}
+	
+	function ex3(){
+		var obj1=eval("var num = 5 + 2");
+		var obj2 = eval("({'a':1, 'b':2, 'c':3})");
+		alert(num + "\n" + obj2.b);
+	}
+	function ex4() {
+		alert(encodeURI("박명배") + "\n"+decodeURI('%EB%B0%95%EB%AA%85%EB%B0%B0'));
+	}
+
+  </script>
+  <style>
+  </style>
+ </head>
+ <body>
+ <h3> 인코딩과 디코딩 </h3>
+ <hr>
+  <form name="frm">
+	<input type="button" onclick="ex1()" value="연습1">&nbsp;&nbsp;
+	<input type="button" onclick="ex2()" value="연습2">&nbsp;&nbsp;
+	<input type="button" onclick="ex3()" value="연습3">&nbsp;&nbsp;
+	<input type="button" onclick="ex4()" value="연습4">&nbsp;&nbsp;
+  </form>
+ </body>
+</html>
