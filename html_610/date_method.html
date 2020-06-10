@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Date 객체로 현재 시간 알아내기</title>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> Date 객체로 현재 시간 알아내기 </h3>
+ <hr>
+    <script>
+		var now = new Date(); //현재 시간 값을 가진 Date 객체 생성
+		document.write("현재 시간 : " + now.toUTCString() + "<br><br>");
+		document.write(now.getFullYear() + "년도<br>");
+		document.write(now.getMonth() + 1 + "월<br>");
+		document.write(now.getDate() + "일<br>");
+		document.write(now.getHours() + "시<br>");
+		document.write(now.getMinutes() + "분<br>");
+		document.write(now.getSeconds() + "초<br>");
+		document.write(now.getMilliseconds() + "밀리초<br>");
+		
+		var next = new Date(2020,6,10,11,15,18) // 6은 7월
+		document.write("next.toLocaleString() : " + next.toLocaleString());
+  </script>
+ </body>
+</html>

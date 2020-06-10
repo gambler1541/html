@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>isFinite()</title>
+  <style>
+	body {
+		font-family:Consolas, monospace;
+		font-size : 16px;
+		line-height : 1.6;
+	}
+
+  </style>
+ </head>
+ <body>
+ <h3> </h3>
+ <hr>
+  <script>
+	var a = 123.123;
+	var b = Infinity;
+	var c = 'Not a Number';
+
+	document.write('<p>123.123 : ' + isFinite(a) + "</p>");
+	document.write('<p>Infinity : ' + isFinite(b) + "</p>");
+	document.write('<p>Not a Number : ' + isFinite(c) + "</p>");
+
+	/*
+		isFinite() 메서드는 주어진 값이 유한수인지 판별합니다.
+
+		123.123은 유한한 숫자이므로 true를 변환합니다.
+		Infinity는 무한한 숫자이므로 false를 반환합니다.
+		Not a Number는 문자이므로 false를 반환합니다.
+	*/
+  </script>
+  
+ </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Array 객체의 메소드 활용</title>    
+  <script>
+	function pr(msg, arr){
+		document.write(msg + arr.toString() + "<br>");
+	}
+  </script>
+
+	<style>
+
+  </style>
+ </head>
+ <body>
+ <h3> Array 객체의 메소드 활용 </h3>
+ <hr>
+	<script>
+		var a = new Array("최","김","이");
+		var b = new Array("박");
+		var c;
+
+		pr("배열 a = " , a);
+		pr("배열 b = ", b );
+
+		document.write("<hr size='5' color='tomato'>");
+
+		c = a.concat(b); //c는 a와 b를 연결한 새 배열
+		pr("c = a.concat(b)후 c =" , c);
+		pr("c = a.concat(b)후 a =" , a);
+
+		document.write("<hr size='5' color='blue'>");
+
+		c = a.join("##"); // c는 배열 a를 연결한 문자열
+		pr("c=a.join(\"##\") 후 c = " , c);
+		pr("c=a.join(\"##\") 후 a = " , a);
+
+		document.write("<hr size='5' color='yellow'>");
+
+		c=a.reverse(); // a.reverse()로 a 자체 변경, c는 배열
+		pr("c=a.reverse() 후 c = ", c);
+		pr("c=a.reverse() 후 a = ", a);
+	
+		document.write("<hr size='5' color='green'>");
+
+		c = a.slice(1,3); // c는 새 배열
+		// 배열의 일부분을 선택하여 새로운 배열을 만듭니다.
+		// start와 end에는 숫자가 들어갑니다. 배열의 start에 해당하는
+		// 요소로부터 end 바로 전의 요소까지를 선택하여 새로운 배열을 만듭니다.2ㅂ	1
+		pr("c=a.slice(1,3) 후 c = ", c);
+		pr("c=a.slice(1,3) 후 a = ", a);
+
+		document.write("<hr size='5' color='skyblue'>");
+
+		c = a.sort(); // a.sort()는 a 자체 변경, c는 배열
+		pr("c=a.sort() 후 c = ", c);
+		pr("c=a.sort() 후 a = ", a);
+
+		document.write("<hr size='5' color='pink'>");
+
+		c = a.toString(); // toString()은 원소 사이에 ","를 넣어 문자열 생성
+		document.write("a.toString() : " + c);
+	</script>
+ </body>
+</html>
