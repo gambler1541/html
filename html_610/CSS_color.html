@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>17개의 CSS3 색이름과 색 </title>
+  
+  <style>
+	div {
+		display : inline-block;
+		width : 80px;
+		padding : 20px;
+	}
+  </style>
+ </head>
+ <body>
+ <h3>17개의 CSS3 색이름과 색 </h3>
+ <hr>
+  <script>
+		var colorNames = ["maroon", "red", "orange", "yellow","olive", "purple","fuchsia","white","lime","green","navy","blue","aqua","teal","black","silver","gray","#ffcccc","#ccccff"];
+
+		for (i =0; i<colorNames.length ;i++ )
+		{
+			var str ="<div style='background-color:"
+			str += colorNames[i];
+			str += "'>" + colorNames[i] + "</div>"
+			document.write(str);
+		}
+  </script>
+ </body>
+</html>

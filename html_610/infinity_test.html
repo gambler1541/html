@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Infinity 테스트</title>
+  <script>
+	function plusfunc() {
+		var a = parseInt(frm.a.value);
+		var b = parseInt(frm.b.value);
+		var c = parseInt(frm.c.value);
+
+		if (isNaN(a) | isNaN(b) | isNaN(c))
+		{
+			alert("숫자가 아닙니다.");
+			frm.a.value = "";
+			frm.b.value = "";
+			frm.c.value = "";
+			frm.a.focus();
+			return;
+		}
+		frm.rs.value = a + b + c;
+	}
+
+	function divifunc(){
+		var a = Number(frm.a.value);
+		var b = Number(frm.b.value);
+		var c = Number(frm.c.value);
+		rs=(a+b)/c;
+
+		if (isFinite(rs) == false)
+		{
+			// 메서드는 주어진 값이 유한수인지 판별합니다.
+			alert("0으로 나눌수 없습니다");
+			frm.a.value="";
+			frm.b.value="";
+			frm.a.focus();
+			return;
+		}
+		frm.rs.value=rs;
+	}
+	  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> infinity test </h3>
+ <hr>
+	<form name="frm">
+		A값 : <input type="text" size="7" name="a">&nbsp;&nbsp;
+		B값 : <input type="text" size="7" name="b"><br>
+		C값 : <input type="text" size="7" name="c"><br>
+		결과 : <input type="text" size="7" name="rs"><br>
+		<input type="button" name="+" value="더하기" onclick="plusfunc()">
+		<input type="button" name="/" value="나누기" onclick="divifunc()">
+		
+
+	</form>
+ </body>
+</html>
