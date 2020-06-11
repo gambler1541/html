@@ -18,3 +18,62 @@ meta   title   style				  div
 	   text				h1			p
 						  l			 l
 					      text			text
+
+
+. document 객체의 요소를 추출하는 메소드 선택자는 크게 2가지로 구분할수
+있습니다.
+요소 속성 명으로 선택해 오는 원거리 선택자와 가까이에 있는 요소를 선택하는
+근거리 선택자가 있습니다.
+
+메소드								의미
+
+getElementById("id명")				태그의 id명이 일치하는
+								문서 객체를 가져오는 선택자
+
+getElementByName("name명")		태그의 name명이 일치하는
+								문서 객체를 가져오는 선택자
+								
+getElementByTagName("tag명")		tag명이 일치하는 문서 객체를
+								가져오는 선택자
+
+: 브라우저는 HTML 페이지를 로드하는 과정에서 각 HTML 태그를 하나의 객체로
+만든다. 예를 들면 <p> ... </p>로 구성된 요소는 p 객체로, <div> ... </div>로 구성된
+요소는 div 객체로 생성한다.
+
+이들은 HTML 문서의 각 요소를 개체화한 것이라는 뜻으로
+HTML DOM 객체라고 부른다. HMTL DOM 은 W3C의 표준이므로
+모든 브라우저에 호환된다.
+
+DOM의 목적
+
+: DOM객체는 HTML 페이지에 작성된 각 HTML 태그를 객체로
+만든것이다. HTML 페이지가 출력 된후, DOM 객체를 통해
+HTML 태그가 출력 된 모양과 콘텐츠를 제어하기 위해서이다.
+
+. DOM객체의 종류는 HTML 태그 종류 만큼 있다.
+하지만 document 객체는 DOM 객체가 아니다.
+
+. DOM 객체의 구성 요소
+
+.HTML 태그의 요소
+ : HTML 태그는 element 라고도 불리며 다음의 5가지 요소로 구성된다.
+
+ <p id="first" style="color:blue" onclick="this.style.color='red'">
+
+	이것은 <span style="color.green"> 문장입니다.</span>
+
+</p>
+
+p : 태그이름(element)
+id : 이름
+style : CSS3 스타일
+onclick : 이벤트 리스너
+이것은 <span style="color:green"> 문장입니다. : 콘텐츠
+
+. property : DOM 객체의 멤버 변수로서 HTML 태그 element를 반영
+. metod : DOM 객체의 멤버 함수로서, HTML 태그를 제어하는데 활용
+. collection : 정보를 집합적으로 표현하는 일종의 배열
+. event listener : 자바스크립트 코드를 이용하여 직접 DOM 객체에 이벤트 리스너
+			     등록
+.CSS3 style : style 프로퍼티를 통해 HTML 태그에 적용된 CSS3 스타일시트를
+		       접근할수 있다.
