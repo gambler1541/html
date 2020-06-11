@@ -1,0 +1,23 @@
+Math 객체
+
+: Math객체는 수학 계산을 위해 다양한 프로퍼티와 메소드를 제공합니다.
+Math 객체는 new Math()로 객체를 생성하지 않고 Math 프로퍼티 또는 Math.메소드()
+로 만듭니다.
+
+
+메소드				의미
+
+abs(x)				x의 절대값을 리턴
+sin(x)				sign x 값 리턴
+exp(x)				e x 값 리턴(e의 x승)
+pow(x,y)				x y 값 리턴(x의 y승)
+random()				0~1보다 작은 임의의 실수 리턴
+floor(x)				x보다 작거나 같은 수 중 가장 큰 정수 리턴
+round(x)				x를 반올림한 정수 리턴
+sqrt(x)				x의 제곱근 리턴
+
+프로퍼티				의미
+
+E					Euler 상수
+PI					원주율 3.141592
+

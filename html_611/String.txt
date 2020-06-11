@@ -1,0 +1,23 @@
+String 객체
+
+: String 객체는 문자열을 다루는 객체입니다.
+문자열은 단일 따옴표(' ') 또는 이중 따옴표(" " )안에
+저장합니다. javascript 에서 문자열은 주로 리터럴을 사용합니다.
+하지만 new 연산자로 String 객체를 생성하기도 합니다.
+
+		
+		메소드					의미
+
+속성		length()					문자열의 길이를 구합니다.
+
+
+
+		big() /small()				문자를 한단계 더 크게/ 더 작게
+		blink()					문자를 깜빡이게 설정
+		fontsize(크기)				문자의 크기설정
+		fontcolor(색상)			문자의 색상설정
+문자		toLowerCase()			문자를 소문자로 변경
+		toUpperCase()			문자를 대문자로 변경
+		anchor(#위치표시문자)		<a name="">과 같은 효과
+		link(링크할 위치)			<a href="">와 같은 효과
+		italic()/strike()			이텔릭체 / 취소선 설정

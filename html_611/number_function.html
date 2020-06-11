@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Number Test</title>
+  <script>
+
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> Number Teset</h3>
+ <hr>
+  <script>
+	var a = 15;
+	var b = new Number(15);
+	var c = 15;
+
+	document.write("a와 b를 더하면 : " + (a.toString() + b.toString()));
+	document.write("<br> 15의 2진수 표현 : " + a.toString(2));
+	document.write("<br> 15의 8진수 표현 : " + a.toString(8));
+	document.write("<br> 15의 16진수 표현 : " + a.toString(16));
+	document.write("<br> a와 b의 타입 : " + typeof a + "&nbsp;&nbsp;" + typeof b);
+	document.write("<br> a와 b의 값 비교 : " + (a==b));
+	document.write("<br> a와 b의 타입 비교 : " + (a===b));
+	document.write("<br>a와 c의 타입 비교 : " + (a===c));
+
+	/* 
+		Equality
+		== 와 != 는 Equality 연산자이다. Equality라고 해봤자 사실 영어로는
+		그 뉘앙스가 제대로 와닿지 않는다. 중요한 점은 javascript에서 ==를 사용하면 연산이 되기 전에 피연산자들을 먼저 비교할 수 있는 형태로 변환시킨다는 것이다.
+		
+		(== 연산자는 동등연산자로, 피연산자가 서로 다른 타입이면 타입을 강제로 변환하여 비교한다.)
+
+		따라서 ==를 사용하면 다음과 같은 사실이 성립한다.
+
+		254 == '254'							// return true
+		true == 1									// return true
+		undefined == null					// return true
+		'abc' == new String('abc')		// return true
+		null == false							// return false
+		'true' == true							// return false
+		true == 2									// return false
+
+		identify
+
+		===와 !== 는 identify 연산자이다.
+		이 녀석은 ==와는 반대로 형변환을 하지 않고 연산한다.
+
+		(=== 연산자는 일치 연산자로, 두 피연산자를 더 정확하게 비교한다.)
+
+		254 === '254'								// return false
+		true === 1									// return false
+		undefined === null					// return false
+		'abc' === new String('abc')		// return false
+ 	*/
+  </script>
+ </body>
+</html>
