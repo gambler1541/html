@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> 프로퍼티 </title>
+  <script>
+	function User(name, age){
+		this.name = name;
+		this.age = age;
+		this.view = function(){
+			document.write('나의 이름은 ' + this.name + '이고 나이는 ' + this.age + '세 입니다.<br>');
+		};
+	}
+
+	var obj1 = new User('Kim', 25);
+	var obj2 = new User('Lee', 28);
+	obj1.view();
+	obj2.view();
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> </h3>
+ <hr>
+  <script>
+
+  </script>
+ </body>
+</html>

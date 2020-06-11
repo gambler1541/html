@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Account 프로토타입 만들기</title>
+  <script>
+	// 프로토 타입 만들기 : 생성자 함수 작성
+	function Account(owner, code, balance){
+		this.owner = owner;
+		this.code = code;
+		this.balance = balance;
+		
+
+		//메소드 만들기
+		this.inquiry = function (){
+			return this.balance;
+		}
+		this.deposit = function(money){
+			this.balance += money;
+		}
+		this.withdraw = function(money){
+			this.balance -= money;
+			return money;
+		}
+
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3>proto type </h3>
+ <hr>
+ <script>
+	var account = new Account("수선화", "111", 35000)
+	document.write("account : ");
+	document.write(account.owner + ", ");
+	document.write(account.code+ ", ");
+	document.write(account.balance + "<br>");
+
+	account.deposit(10000); // 10000원 저금
+	document.write("10000원 저금 후 잔액은 " + account.inquiry() + "<br>");
+	account.withdraw(5000); // 5000원 인출
+	document.write("5000원 인출 후 잔액은" + account.inquiry() + "<br>");
+
+</script>
+ </body>
+</html>
