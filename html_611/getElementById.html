@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>getElementById</title>
+  <script>
+	function process1(){
+		var ob = document.getElementById("txt").value;
+		document.getElementById("view1").innerText=ob;
+	}
+	function process2(){
+		var ob = document.getElementById("txt").value;
+		document.getElementById("view2").innerHTML=ob;
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3>getElementById </h3>
+ <hr>
+	<input type="text" id="txt" size="30" name="text">
+	<input type="button" value="출력1" onclick="process1()">
+	<input type="button" value="출력2" onclick="process2()">	
+	<br>
+	<br>
+	<br>
+	<div id="view1"></div><br>
+	<div id="view2"></div>
+ </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>This Test</title>
+  <script>
+		function change(obj, size, color){
+			obj.style.color = color;
+			obj.style.fontSize = size;
+		}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> this 활용 </h3>
+ <hr>
+  <button onclick="change(this, '30px', 'red')">버튼</button>
+  <button onclick="change(this,'45px','blue')">버튼</button>
+  <div onclick = "change(this, '25px', 'cyan')">
+	여기 클릭하면 크기와 색 변경
+  </div>
+  <span onclick ="change(this, '50px', '#ffccff')">span</span>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>CSS 스타일 동작 변경</title>
+  <script>
+		function change() {
+			var span1 = document.getElementById("mySpan1");
+			var span2 = document.getElementById("mySpan2");
+			// id가 mySpan인 객체찾기
+
+			span1.style.color = "green";
+			span1.style.fontSize = "30px";
+			span1.style.display = "block";
+			span1.style.width = "6em"; 
+			span1.style.border = "3px dotted magenta";
+			span1.style.margin = "20px";
+			
+			span2.style.color = "green";
+			span2.style.fontSize = "30px";
+			span2.style.display = "block";
+			span2.style.width = "6em"; 
+			span2.style.border = "3px dotted magenta";
+			span2.style.margin = "20px";
+		}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3>CSS 스타일 동적 변경 </h3>
+ <hr>
+  <p style="color:blue">이것은<span id="mySpan1" style="color:red">문장입니다.</span></p>
+  <p style="color:blue">이것은<span id="mySpan2" style="color:red">문장입니다.</span></p>
+  <input type="button" value="스타일변경" onclick="change()">
+ </body>
+</html>
