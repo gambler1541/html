@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>document.write() 사용시 주의할 점</title>
+  <script>
+
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body onclick="document.write('<h3>클릭되었습니다.</h3>')">
+ <h3> write()를 잘못 사용한 예</h3>
+ <hr>
+  <p>웹 브라우저의 바탕 아무 곳이나
+  클릭 해보세요</p>
+
+  <!--
+	HTML 텍스트를 HTML 문서에 추가하기 위해
+	document.write()를 사용한다. 하지만 HTML 문서가
+	로드되어 출력이 모두 이루어지고 나면 document 객체가
+	닫히기 때문에 더 이상 HTML 텍스트를 추가(출력) 할수 없다.
+	document 객체가 닫힌후 document.write()가 실행되면
+	현재 HTML 문서가 지워지고 새 문서가 작성되는 결과를 보여준다.
+  -->
+ </body>
+</html>
