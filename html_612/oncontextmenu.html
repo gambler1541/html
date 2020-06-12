@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>oncontextmenu : 오른쪽 마우스 클릭 금지</title>
+  <script>
+	function hideMenu() {4
+		alert("오른쪽 클릭 <컨텍스트 메뉴>금지");
+		return false;
+	}
+	
+	document.oncontextmenu=hideMenu;
+
+	/*
+		마우스 오른쪽을 눌렀을때 나오는
+		메뉴를 contextmenu라고 합니다.
+		메뉴가 나오는걸 못나오게 하는거죠.
+
+		document.ondragstart = new Function('return false'); //드래그 방지
+
+		document.onselectstart = new Function('return false'); // 선택 방지
+	*/
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> oncontextmenu에서 컨텍스트 메뉴 금지</h3>
+ <hr>
+  마우스  오른쪽 클릭은 금지됩니다. 아무곳이나 클릭해도 컨텍스트 메뉴를 볼 수 없습니다.<br>
+  <img src="../img/beach2.png" alt="miami">
+ </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> 마우스 관련 리스너</title>
+  <script>
+	var width = 1; // 테두리 두께
+	function down(obj){
+		obj.style.fontStyle ="italic";
+	}
+	function up(obj){
+		obj.style.fontStyle="normal";
+	}
+	function over(obj){
+		obj.style.borderColor="#33dd3355";
+		// 테두리 폭이 0일때 색은 보이지 않는다.
+	}
+	function out(obj){
+		obj.style.borderColor = "lightgray";
+	}
+	function wheel(e, obj){
+		// e는 이벤트 객체
+		// 휠을 아래로 굴릴 때
+		if (e.wheelDelta < 0)
+		{
+			width--; // 폭 1 감소
+			if (width < 0)
+			{
+				width = 0;
+			}
+		}
+		else {
+			width++;
+		}
+		obj.style.borderStyle = "ridge";
+		obj.style.borderWidth = width + "px";
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> Mouser Event Listener </h3>
+ <hr>
+  <div>마우스 관련
+	<span onmousedown="down(this)" onmouseup="up(this)" onmouseover="over(this)" onmouseout="out(this)" onwheel="wheel(event,this)">이벤트</span> 가 발생합니다.
+ </div>
+ </body>
+</html>
