@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> HTML 문서 작성기 만들기  </title>
+  <script>
+	var win = null;
+	function showHTML() {
+		if (win == null || win.closed)
+		{
+			win = window.open("","outWin", "width=250, height=150")
+		}
+
+		/*
+		반환값(win)
+
+		새로 만들어진 창 객체가 반환됩니다. 창의 생성에 실패화면 null을 반환합니다. 이 객체를 통해서 새창을 제어할 수 있습니다. 예로 win.close();로 창을 닫을 수 있습니다.
+
+		var win = window.open(url, name, spesc, replace);
+
+		url : 새 창에 보여질 주소 입니다. 선택적인 값으로 비워두면 빈창(about:blank)이 보입니다. 
+
+		name : 새로 열릴 창의 속성 또는 창의 이름을 지정합니다. 선택적인 값으로 기본갓은 "_blank" 입니다.
+
+		specs : 선택적인 값으로 창의 크기, 스크롤여부, 리사이즈 가능등의 속성을 지정합니다.
+
+		replace : 히스토리 목록에 새 항목을 만들지 현재 항목을 대체할지 지정합니다.
+
+		- true : 현재 히스토리를 대체합니다.
+
+		- false : 히스토리에 새 항목을 만듭니다.
+
+
+		*/
+
+		var textArea = document.getElementById("srcText");
+		win.document.open();
+		win.document.write(textArea.value);
+		win.document.close();
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> HTML 문서 작성기 만들기</h3>
+ <hr>
+ <p>아래에 HTML 문서를 작성하고 버튼을 클릭해보 세요.
+ 새 윈도우에 HTML 문서가 출력됩니다. </p>
+ <textarea id="srcText" cols="40" rows="10"></textarea>
+ <br><br>
+ <button onclick="showHTML()">HTML 문서 출력하기</button>
+ </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서의 동적 구성</title>
+<style></style>
+<script>
+	function createDIV(){
+		var obj = document.getElementById("parent");
+		var newDIV = document.createElement("div");
+		newDIV.innerHTML = "새로 생성된 DIV입니다.";
+		newDIV.setAttribute("class","myDiv");
+		newDIV.style.backgroundColor = "yellow";
+		newDIV.onclick = function(){
+			var p = this.parentElement; // 부모 HTML 태그 요소
+			p.removeChild(this); // 자신을 부모로 부터 제거
+		};
+		obj.appendChild(newDIV);
+	}
+
+	/*
+		setAttribute()
+		: 선택한 요소(element)의 속성(attribute) 값을 정합니다.
+
+		문법
+		element.setAttribute('attributename', 'attributevalue')
+		attributename에는 속석 이름을, attributevalue에는 속성값을 넣습니다.
+
+		예)
+		document.getElementById('xyz').setAttribute('title', 'This is title')
+		id 값이 xyz인 요소의 title 속성을 This is title로 정합니다. 만약 이미 속성
+		값이 존재 한다면 그 값을 지우고 새 값을 적용합니다.
+	*/
+</script>
+</head>
+
+<body id="parent">
+<h3>DIV 객체를 동적으로 생성, 삽입, 삭제하는 예제</h3>
+<hr>
+<p>
+	DOM 트리에 동적으로 객체를 삽입할 수 있습니다.<br>
+	createElement(), appendChild(), removeChild() 메소드를 이용하여 새로운 객체를 생성, 삽입, 삭제하는 예제입니다.
+</p>
+<a href="javascript:createDIV()">DIV생성</a><p></p>
+</body>
+
+</html>
+
