@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>이벤트의 디폴트 행동 취소</title>
+  <script>
+	function query(){
+		var ret = confirm("다음으로 이동하시겠습니까?");
+		return ret; // confirm()의 리턴 값은 true 또는 false
+	}
+
+	function noAction(e){
+		e.preventDefault(); //이벤트의 디폴트 행동 강제 취소
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3>이벤트의 디폴트 행동 취소  </h3>
+ <hr>
+  <a href="http://www.daum.net" onclick="return query()">다음으로 이동할지 물어보는 링크</a>
+  <hr>
+  <form>
+	<input type="checkbox">빵(체크 됨)<br>
+	<input type="checkbox" onclick="return noAction(event)">술(체크 안됨)<br>
+	<input type="radio" name="radio">라디오1
+	<input type="radio" name="radio">라디오2
+	<input type="radio"  name="radio" onclick="return false">라디오3
+  </form>
+ </body>
+</html>
