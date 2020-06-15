@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>onload로 이미지 크기 출력</title>
+  <script>
+	function changeImage() {
+		var sel = document.getElementById("sel");
+		var img = document.getElementById("myImg");
+		img.onload = function() {
+			// 이미지 크기 출력
+			var mySpan = document.getElementById("mySpan");
+			mySpan.innerHTML = img.width + "x" + img.height;
+		}
+		var index = sel.selectedIndex;	// 선택된 옵션 인덱스
+		img.src = sel.options[index].value;	// <option>의 value 속성
+
+		// 이미지 로딩 시작, 완료 후 onload 리스너 호출
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body onload="changeImage()">
+ <h3> onload로 이미지 크기 출력</h3>
+ <hr>
+  <form>
+	<select  id="sel" onchange="changeImage()">
+		<option value="../img/apple.png">사과</option>
+		<option value="../img/banana.png">바나나</option>
+		<option value="../img/mango.png">망고</option>
+		<option value="../img/water-melon.jpg">수박</option>
+	</select>
+	<span id="mySpan">이미지 크기</span>
+	  </form>
+	<p><img src="../img/apple.png" alt="apple" id="myImg"></p>
+
+ </body>
+</html>
