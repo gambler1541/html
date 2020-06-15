@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>new Image()로 이미지 로딩</title>
+  <script>
+		// 미리 로딩해둘 이미지 이름 배열
+		var files = [
+				"../img/penguins.png",
+				"../img/lighthouse.png",
+				"../img/Chrysanthemum.png",
+				"../img/Desert.png",
+				"../img/Hydrangeas.png",
+				"../img/Jellyfish.png",
+				"../img/Koala.png",
+				"../img/Tulips.png",
+		]
+			var files2 = [
+				"../img/banana.png",
+				"../img/beach.png",
+				"../img/cat1.png",
+				"../img/cat.png",
+				"../img/cat.jpg",
+		
+		]
+		var imgs = new Array();
+		var imgs2 = new Array();
+		for (var i = 0; i < files.length ;i++ )
+		{
+			imgs[i] = new Image(); // 이미지 객체 생성
+			imgs[i].src = files[i]; //이미지 미리 로딩
+		
+		}
+		for (var i = 0; i < files2.length ; i++ )
+		{
+			imgs2[i] = new Image();
+			imgs2[i].src = files2[i];
+		}
+		
+	
+
+		// 다음 이미지 출력
+		var next = 1;
+		function change(img){
+			img.src = imgs[next].src; // 이미지 변경
+			next ++;
+			next %= imgs.length; //개수를 넘으면 처음으로
+		}
+
+		var next2 = 1;
+		function change2(img){
+			img.src = imgs2[next2].src; // 이미지 변경
+			next2 ++;
+			next2 %= imgs2.length; //개수를 넘으면 처음으로
+		}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> new Image()로 이미지 로딩 </h3>
+ <hr>
+ 이미지를 클릭하면 다음 이미지를 보여줍니다.<p>
+  <img style="border:20px ridge wheat" src="../img/penguins.png" alt="animal" width="300" height="300" onclick="change(this)">
+  <br>
+  <img style="border:20px groove #ffddaa" src="../img/banana.png" alt="etc" width="300" height="300" onclick="change2(this)">
+ </body>
+</html>

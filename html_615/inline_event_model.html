@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>인라인 이벤트 모델</title>
+  <script>
+	function btnClick(v) {
+		alert(v);
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> inline event model </h3>
+ <hr>
+ <input type="button" value="클릭1" onclick="alert('클릭1')">
+ <input type="button" value="클릭2" onclick="var str = '클릭2'; alert(str)">
+ <input type="button" value="클릭3" onclick="btnClick(value)">
+ </body>
+</html>

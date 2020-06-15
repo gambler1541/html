@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> onfocus 와 onblur </title>
+  <script>
+	function checkFiled(obj){
+		if (obj.value == "")
+		{
+			alert("enter name !!!");
+			obj.focus(); //obj에 다시 포커스
+		}
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body onload="document.getElementById('name').focus();">
+ <h3> onfocus, onblur </h3>
+
+ <!-- 
+	onfocus : 포커스가 들어왔을때
+	onblur : 포커스를 잃었을때
+	onchange : select태그에서 선택을 바꾸었을때
+	onkeydown : 키보드를 눌렀을때
+ -->
+ <hr>
+	<p>이름을 입력하지 않고 다른 창으로
+	이동할 수 없습니다.</p>
+	<form> 
+		이름 <input type="text" id="name" onblur="checkFiled(this)"><p>
+		학번 <input type="text">
+		</p>
+	</form>
+ </body>
+</html>

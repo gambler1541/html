@@ -1,0 +1,114 @@
+BOM(Browser Object Model)
+
+DOM 객체들은 HTML 페이지의 각 HTML 태그들을 객체화한 것으로 자바스클비트 코드로
+화면에 출력된 HTML 태그의 콘텐츠나 모양을 변경하기 위해 설계되었다.
+
+BOM은 윈도우, 윈도우에 로드된 문서의 URL, 브라우저가 출력된 스크린 장치
+,브라우저의 종류와 기능 등 브라우저와 브라우저가 실행되고 있는 환경을 자바스크립트
+코드로 접근하고 제어할수 있도록 설계된 객체들의 그룹을 일컫는다.
+
+BOM의 종류
+: 대부분의 브라우저들은 다음의 BOM을 제공하며, 개발자들이 자바스크립트를 이용하여
+브라우저와 관련된 정보를 얻고 브라우저와 윈도우를 제어하도록 한다.
+window 객체는 브라우저가 제어하는 BOM 객체의 최상위에 존재한다.
+
+. window
+. navigator
+. history
+. location
+. screen
+
+* BOM에 대한 W3C의 표준은 없다. 브라우저마다 BOM 객체의 종류가 다르고,
+이름이 같더라도 브라우저에 따라 프로퍼티와 메소드가 다를수 있다.
+
+.window 객체
+: window객체는 열려있는 브라우저 윈도우나 탭 윈도우를 나타내는 객체로 윈도우마다 
+하나의 window 객체가 생성된다.
+
+window 객체가 생성되는 경우는 다음 3가지이다.
+
+1. 브라우저가 새로운 웹 페이지를 로드할 때 window 객체 자동 생성
+2. <iframe>태그 당 하나의 window 객체 자동 생성
+3. 개발자가 다음 자바스크립트 코드로 임의의 window 객체 생성
+
+ex) window.open("웹 페이지 URL", "윈도우이름","윈도우속성")
+	
+	window.open()이 실행되면 새 윈도우(혹은 탭 윈도우)가 열리고 웹 페이지가
+	출력된다.
+
+* window 객체의 프로퍼티와 컬렉션, 메소드
+
+프로퍼티/ 컬렉션
+
+.window // 현재 윈도우 객체에 대한 레퍼런스
+.self		// 현재  윈도우 객체에 대한 레퍼런스
+.document // 윈도우에 담긴 document 객체에 대한 레퍼런스
+.name	// 윈도우 이름 문자열
+.location	// location 객체에 대한 레퍼런스
+.history // history 객체에 대한 레퍼런스
+.locaionbar // 위치바 객체에 대한 레퍼런스
+.menubar // 메뉴바 객체에 대한 레퍼런스
+.personalbar // 북마크 툴바 등 사용자 개인의 취향에 따라 기능을 두는 바
+.scrollbars // 스크롤바 객체에 대한 레퍼런스
+.toolbar // 툴바 객체에 대한 레퍼런스
+.status // 상태바에 출력한(출력되는) 문자열, 보안의 이유로 대부분의 브루아저에서
+		이를 허용하도록 셋팅을 해야하는 문자열 변경가능
+.closed // 현재 창이 닫혀 보이지 않는 상태이면 true
+.frames // 윈도우에 존재하는 iframe 객체에 대한 컬렉션
+.length // 윈도우에 존재하는 iframe의 개수
+.top	     // 윈도우 계층 구조에서 최상위 윈도우 객체에 대한 레퍼런스
+.parent // 현재 윈도우의 부모 윈도우 객체에 대한 레퍼런스
+.navigator // navigator 객체에 대한 레퍼런스
+.outerWidth // 윈도우 전체의 폭
+.outerHeight // 윈도우 전체의 높이
+.screenX // 스크린 상의 윈도우 x 좌표
+.screenY // 스크린 상의 윈도우 y 좌표
+.pageXOffset // scrollX와 동일하며 현재 문서의 스크롤 x값
+.pageYOffset // scrollY와 동일하며 현재 문서의 스크롤 y값
+.scrollX	// pageXOffset과 동일하며 현재 문서의 스크롤 x값
+.scrollY	// pageYOffset과 동일하며 현재 문서의 스크롤 y값
+
+
+메소드
+
+.open()	// 새 윈두오를 연다
+.close()	// 윈도우를 닫는다.
+.focus()	// 윈도우에 포커스를 주어 키보드 입력을 받을 수 있는 상태로 만든다.
+.blur()	// 현재 윈도우는 포커스를 잃는다
+.getSelection()	// 윈도우 내에 선택된 텍스트를 문자열로 리턴한다.
+.stop()	// HTML 페이지 로딩을 중단시킨다.
+		   브라우저의 STOP 버튼을 누른 것과 동일하다
+.alert()	// 경고 다이얼로그를 출력한다.
+.confirm()	// 확인 다이얼로그를 출력한다.
+.prompt()		// 프롬프트(입력) 다이얼로그를 출력한다.
+.print()		// 현재 페이지를 출력하기 위해 프린트 다이얼로그를 출력한다.
+.postMessage()	// 다른 윈도우나 워커 태스크로 문자열 데이터를 보낸다.
+.setInterval()	// 타임아웃 코드가 반복 호출되도록 타이머를 가동시킨다.
+.clearInterval()	// setInterval()로 가동 중인 타이머를 중단시킨다.
+.moveBy()	// 지정된 픽셀만큼 윈도우를 이동시킨다.
+.moveTo()	// 지정된 위치로 윈도우를 이동시킨다.
+.resizeBy()	// 지정된 크기만큼 윈도우의 크기를 조절한다.
+.resizeTo()	// 지정된 크기로 윈도우의 크기를 조절한다.
+.scrollBy()	// 주어진 픽셀만큼 상하좌우 스크롤한다.
+.scrollTo()	// 특정한 좌표로 스크롤한다.
+
+윈도우 열기, window.open()
+
+	window.open(URL, WindowName, Feature)
+
+- URL : 윈도우에 출력할 웹 페이지 주소 문자열
+- WindowName : 새로 여는 윈도우의 이름 문자열로서 생략 가능
+- Feature : 윈도우의 모양, 크기 등의 속성들을 표현하는 문자열.
+		 속성들은 빈칸 없이 콤마(',')로 분리하여 작성하며 생략 가능
+
+
+.location 객체
+
+location 객체는 윈도우에 로드된 웹 페이지의 URL 정보를 
+나타내는 객체로서, 윈도우 열릴 때 자동 생성된다.
+
+URL 정보는 다음과 같이 window의 lcoation 프로퍼티를 통해 알아낼
+수 있다.
+
+ex) window.location 혹은 location
+

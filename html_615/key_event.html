@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> 키 이벤트 </title>
+  <script>
+	function whatKeyDown(e){
+		var str ="";
+		var div = document.getElementById("div");
+		div.innerHTML = ""; // div 객체 내용 초기화
+		str += "e.key = " + e.key + "<br>";
+		str += "e.code = " + e.code + "<br>";
+		div.innerHTML = str; //div 객체에 html 문자열 출력
+	}
+	/*
+		* 키 이벤트 객체의 프로퍼티
+		keyCode // 입력된 키의 유니코드 값
+		altkey // <Alt>키가 눌러진 상태이면 true
+		altLeft // 왼쪽<Alt>키가 눌러진 상태이면 true
+		ctrlKey // <Ctrl>키가 눌러진 상태이면 true
+		ctrlLeft // 왼쪽 <Ctrl>키가 눌러진 상태이면 true
+		shiftKey // <Shift>키가 눌러진 상태이면 true
+		shiftLeft //왼쪽 <Shift>키가 눌러진 상태이면 true
+
+		* onreset 과 onsubmit
+
+		onreset 리스너는 reset 버튼을 클릭하여 폼을 초기화할 때 호출되며,
+		onsubmit 리스너는 submit버튼을 클릭하여 폼을 서버로 전송할 때 호출된다.
+		onreset 리스너에서 false를 리턴하면 폼이 초기화되지 않고,
+		onsubmit 리스너에서 false를 리턴하면 폼은 서버로 전송되지 않는다.
+		이 두 리스너는 <form> 태그에 작성된다.
+	*/
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> 키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+ <hr>
+ 텍스트 창에 키를 눌러보세요. Alt, Shift, Ctrl 키도 가능합니다. <br>
+ <input type="text" id="text" onkeypress="whatKeyDown(event)">
+ <div id="div" style="background-color:skyblue; width:300px; height:100px">
+ <!--
+	onkeypress : <Enter>, <Space>키와 문자키에 대해서만 키가 눌려지는 순간 추가 호출 - <F1>, <Shift>, <PgDn>, <Del>, <Ins>등 문자 키가 아닌 경우 호출되지 않음
+ -->
+ </div>
+ </body>
+</html>
