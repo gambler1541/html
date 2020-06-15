@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>random background</title>
+  <script>
+	function randomBackground(obj){
+		var r = Math.floor(Math.random() * 256);
+		var g = Math.floor(Math.random() * 256);
+		var b = Math.floor(Math.random() * 256);
+		obj.style.backgroundColor = "rgb(" + r + "," + g + ","+ b + ")";
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body onclick="randomBackground(this)">
+ <h3> div 클릭</h3>
+ <hr>
+	<div onclick="randomBackground(this)">div 아무곳이나 <strong>클릭11</strong>하면
+	배경색이 랜덤하게 변합니다.
+	</div>  
+	<div onclick="randomBackground(this)">div 아무곳이나 <strong>클릭22</strong>하면
+	배경색이 랜덤하게 변합니다.</div>
+	<span onclick="randomBackground(this)">텍스트를 누르면 배경색이 랜덤하게 변합니다.</span>
+ </body>
+</html>
