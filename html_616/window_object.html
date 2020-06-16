@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>window 객체</title>
+  <script>
+	window.onload = function() {
+		var win = window.open('win_1.html','','width=300,height=200');
+		// 모니터의 x = 100 y = 100 좌표에 창을 이동시킴
+		win.moveTo(500, 500);
+
+	window.setTimeout(function(){ win.close(); },5000);
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> window 객체</h3>
+ <hr size="5" color="red">
+	setTimeout Test<br>
+	setTimeout Test<br>
+	setTimeout Test<br>
+<hr size="5" color="green">
+ </body>
+</html>
