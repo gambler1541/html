@@ -13,7 +13,8 @@
  <body>
  <h3>이미지에 마우스를 올리고 5초간 그대로 있을 때 사이트로 이동합니다.</h3>
  <hr>
-  <img src="../img/naver.gif" id="img" onmouseover="startTimer(5000)" onmouseout="cancelTimer()">
+  <img src="../img/naver.gif" id="img" onmouseover="startTimer(5000)" onmouseout="cancelTimer()"><br>
+  <img src="../img/daum.png" id="img2" onmouseout="cancelTimer()" onmouseover="startTimer2(5000)">
   <script>
 	var timerID = null;
 	function startTimer(time){
@@ -22,6 +23,13 @@
 
 		// 툴팁 메시지
 		document.getElementById("img").title = "타이머 작동 시작...";
+	}
+	function startTimer2(time){
+		// 타이머 시작
+		timerID = window.setTimeout("load('http://daum.net')", time);
+
+		// 툴팁 메시지
+		document.getElementById("img2").title = "타이머 작동 시작...";
 	}
 
 	function cancelTimer(){

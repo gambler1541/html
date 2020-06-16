@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>setTimeout() / clearTimeout()</title>
+  <script>
+	function startClock(){
+		var clock = document.getElementById("clock");
+		timeout(clock);
+	}
+	function timeout(obj){
+		var current = new Date();
+		obj.innerHTML = current.toLocaleTimeString();
+		setTimeout("timeout(clock)",1000); // 1초 후 timeout() 호출
+	}
+  </script>
+  <style>
+	div{
+		display : inline-block;
+		width : 7em;
+		border : 2px solid darkgray;
+		background-color : aliceblue;
+	}
+  </style>
+ </head>
+ <body onload="startClock()">
+ <h3>setTimeout() / clearTimeout() </h3>
+ <hr size="5" color="red">
+  <div id="clock"></div>
+ </body>
+</html>

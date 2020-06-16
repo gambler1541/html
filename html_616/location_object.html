@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>location 객체</title>
+  <script>
+	var t = new Date();
+	document.write(t.getHours()+":"+t.getMinutes()+":"+t.getSeconds());
+	setInterval(function(){
+		location.reload();
+	},1000)
+
+	document.write("<br>현재 문서의 주소는 " + location.href + "입니다.");
+	console.log(location.toString(), location.href);
+	document.write("<br>현재 문서의 호스트 이름은 " + location.hostname + "입니다.");
+	document.write("<br>현재 문서의 파일 경로명은 " + location.pathname + "입니다.");
+
+	/*
+		Location 객체는 문서의 주소와 관련된 객체로
+		Window 객체의 프로퍼티다.
+		이 객체를 이용해서 윈도우의 문서 URL을 변경할 수 있고, 문서의 위치
+		와 관련해서 다양한 정보를 얻을 수 있다.
+	*/
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> </h3>
+ <hr>
+  
+ </body>
+</html>
