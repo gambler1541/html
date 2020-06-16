@@ -1,0 +1,45 @@
+. screen 객체
+
+: screen은 브라우저가 실행되는 스크린 장치에 관한 정보를 담고 잇는 객체이다.
+
+screen 객체는 다음과 같이 접근한다.
+
+	: window.screen 혹은 screen
+
+* screen 객체의 프로퍼티
+
+. availHeight : 작업 표시줄 등을 제외하고 브라우저가 출력 가능한 영역의 높이
+. availWidth : 출력 가능한 영역의 폭
+. pixelDepth : 한 픽셀의 색을 나타내기 위해 사용되는 비트 수
+. colorDepth : 한 픽셀의 색을 나타내기 위해 사용되는 비트 수로서 pixeDepth와
+			동일. 대부분의 브라우저에서 지원되므로 pixelDepth보다 colorDepth를
+			사용할 것을 권함
+. height : 스크린의 수직 픽셀 수
+. width : 스크린의 수평 픽셀 수
+
+history 객체
+
+: history 객체는 사용자가 방문한 웹 페이지의 리스트, 즉 히스토리 정보를 담고 있는
+객체로 다음과 같이 접근한다.
+
+	window.history 또는 history
+
+	. history.back(); 또는 history.go(-1); // 이전 페이지로 이동
+	. history.forward(); 또는 history.go(1); // 다음 페이지로 이동
+
+history 객체의 프로퍼티와 메소드
+
+프로퍼티
+
+. length : 히스토리 리스트에 있는 엔트리 수
+
+메소드
+
+.back() : 히스토리에 있는 이전 웹 페이지로 이동,
+		브라우저의 <back> 버튼과 동일
+
+.forward() : 히스토리에 있는 다음 웹 페이지로 이동,
+		브라우저의 <foraward> 버튼과 동일
+
+.go(n) : 히스토리에서 현재 웹 페이지에서 n 만큼 상대적인 웹 페이지로 이동
+
