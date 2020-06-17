@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> getElementById </title>
+  <script>
+	function process1(){
+		var ob = document.getElementById("txt").value;
+		document.getElementById("view1").innerText=ob;
+		document.getElementById("txt").value ="";
+	}
+
+	function process2(){
+		var ob = document.getElementById("txt").value;
+		document.getElementById("view2").innerHTML = ob;
+		document.getElementById("txt").value="";
+	}
+
+	function process3(){
+		var ob = document.getElementById("txt").value;
+		document.getElementById("view3").innerHTML = ob;
+		document.getElementById("txt").value="";
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> getElementById </h3>
+ <hr>
+  <input type="text" id="txt" size="20" name="text">
+  <input type="button" value="출력1" onclick="process1()">
+  <input type="button" value="출력2" onclick="process2()">
+  <input type="button" value="출력3" onclick="process3()">
+  <br>
+  <br>
+  <br>
+  <div id="view1"></div>
+  <div id="view2"></div>
+  <div id="view3"></div>
+ </body>
+</html>
