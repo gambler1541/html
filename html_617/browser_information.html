@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> 브라우저 정보 출력 </title>
+  <script>
+  function printNavigator() {
+	var text = "<span>appCodeName : </span>" + navigator.appCodeName + "<br>";
+	text += "<span> appName </sapn> : " + navigator.appName +"<br>"; 
+	text += "<span> Version </sapn> : " + navigator.appVersion +"<br>"; 
+	text += "<span> platform </sapn> : " + navigator.platform +"<br>"; 
+	text += "<span> product </sapn> : " + navigator.product +"<br>"; 
+	text += "<span> userAgent </sapn> : " + navigator.userAgent+"<br>"; 
+	text += "<span> vendor </sapn> : " + navigator.vendor+"<br>"; 
+	text += "<span> language </sapn> : " + navigator.language+"<br>"; 
+	text += "<span> onLine </sapn> : " + navigator.onLine+"<br>"; 
+	text += "<span> cookieEnabled </sapn> : 오전 9:36:31" + navigator.cookieEnabled+"<br>"; 
+	text += "<span> javaEnabled() </sapn> : " + navigator.javaEnabled() +"<br>"; 
+	text += "<span> plugins.length </sapn> : " + navigator.plugins.length+"<br>"; 
+	for (j=0;j<navigator.plugins.length ;j++ )
+	{
+		text += "plugins" + j + " : <blockquote>";
+		text += navigator.plugins[j].name + "<br>"
+		text += "<i>" + navigator.plugins[j].description + "<i><br>";
+		text += navigator.plugins[j].filename + "</blockquote>";
+	}
+
+	// div 태그에 출력
+	var div = document.getElementById("div");
+	div.innerHTML = text;
+	}
+  </script>
+  <style>
+	span{
+		color :blue;
+		}
+	div {
+		border-color : yellowgreen;
+		border-style : solid;
+		padding : 5px;
+	}
+  </style>
+ </head>
+ <body onload="printNavigator()">
+ <h3> 브라우저 정보 출력 </h3>
+ 아래에 이 브라우저에 관한 여러가지 정보를 출력합니다.
+ <hr>
+<div id="div"></div>  
+ </body>
+</html>
