@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>json 배열</title>
+  <script>
+	function init() {
+		var emp = [
+			{"name": "kim",
+			"age" : 30,
+			"tel" : "111-1111"},
+			{"name": "lee", 
+			"age" : 40,
+			"tel" : "222-2222"},
+			{"name" : "park",
+			 "age" : 20,
+			 "tel" : "333-3333"},
+			{"name" : "박명배",
+			 "age" : 20,
+			 "tel" : "444-4444"},
+		]
+
+	var msg = "";
+	msg += "이름: " + emp[0].name + "<br>나이:" +emp[0].age + "<br>전화번호 : "+ emp[0].tel +"<br><br>";
+
+	msg += "이름: " + emp[1].name + "<br>나이:" +emp[1].age + "<br>전화번호 : "+ emp[1].tel +"<br><br>";
+
+	msg += "이름: " + emp[2].name + "<br>나이:" +emp[2].age + "<br>전화번호 : "+ emp[2].tel +"<br><br>";
+
+	msg += "이름: " + emp[3].name + "<br>나이:" +emp[3].age + "<br>전화번호 : "+ emp[3].tel + "<br><br>";
+
+	document.getElementById("result").innerHTML = msg;
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+<body onload="init()">
+ <h3> json표기법 </h3>
+ <div id="result"></div>
+ <hr>
+ </body>
+</html>

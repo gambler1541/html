@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>JSON 객체</title>
+  <script>
+	function init(){
+		var emp = {
+			"name" : "민들레",
+			"age" : "25",
+			"tel" : "111-1111",
+			"address" : "서울"
+		} ;
+
+		var msg = "";
+		msg += "이름: " + emp.name + "<br>" + 
+		"나이: " + emp.age + "<br>" + 
+		"전화: " + emp['tel'] + "<br>" +
+		"주소: " + emp['address'] + "<br>" 
+	
+		document.getElementById("result").innerHTML = msg;
+	}
+	/*
+		json 데이터
+
+		: json 데이터는 이름과 값의 쌍으로 구성됩니다.
+
+		: 이러한 json 데이터는 데이터 이름, 콜론(:), 값의 순서로 구성됩니다.
+
+		. 문법
+
+		"데이터이름" : 값
+
+		다음 예제는 데이터의 이름이 "name"이고, 값은 "식빵"이라는 문자열을 갖는 json 데이터의 예제입니다.
+
+		예제 => "name" : "식빵"
+
+		데이터의 이름도 문자열이므로, 항상 큰따옴표("")와 함께 입력해야 합니다.
+	*/
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body onload="init()">
+ <h3> json표기법 </h3>
+ <div id="result"></div>
+ <hr>
+  
+ </body>
+</html>
