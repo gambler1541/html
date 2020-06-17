@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>선으로 삼각형 그리기</title>
+  <script>
+
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> 선으로 삼각형 그리기</h3>
+ <hr>
+  <canvas id="myCanvas" style="background-color:aliceblue" width="200" height="150"></canvas>
+  <script>
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+
+	context.beginPath(); // 빈 경로 만들기
+	// beginPath() 메소드는 경로를 시작하거나 현재 경로를 재설정 한다.
+	context.moveTo(120, 20); //(120, 20)을 시작점으로 설정
+	context.lineTo(20, 50); // 경로에 (120, 20)에서 (20, 50)까지 직선 추가
+	context.lineTo(150,120); // 경로에 (20,50)에서 (150, 120)까지 직선 추가
+	context.lineTo(120, 20); // 경로에 (150,120)에서 (120, 20)까지 직선 추가
+	context.strokeStyle="magenta"; // 선의 색
+	context.stroke(); // 경로를 캔버스에 그린다.
+
+	context.beginPath(); 
+	context.moveTo(120, 20); 
+	context.lineTo(20, 20); 
+	context.lineTo(20,120); 
+	context.lineTo(120, 120); 
+	context.lineTo(120, 20); 
+	context.strokeStyle="blue"; 
+	context.stroke(); 
+
+	var c= document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+
+	ctx.beginPath();
+	ctx.lineWidth="5";
+	ctx.strokeStyle="green";
+	ctx.moveTo(0,75);
+	ctx.lineTo(250,75);
+	ctx.stroke();
+
+	
+	ctx.beginPath();	// beginPath가 없다면 위의 코드의 색이 적용
+	// beginPath()를 실행시키면 새롭게 draw를 함
+	ctx.lineWidth="5";
+	ctx.strokeStyle="purple";
+	ctx.moveTo(50,0);
+	ctx.lineTo(150,130);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.lineWidth="5";
+	ctx.strokeStyle="tomato";
+	ctx.moveTo(140,30);
+	ctx.lineTo(50, 130);
+	ctx.stroke();
+  </script>
+ </body>
+</html>

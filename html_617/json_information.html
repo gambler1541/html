@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>json data test</title>
+  <script>
+	function init(){
+		var emp = [
+		{"name" : "kim",
+		 "address" : "서울시",
+		 "career ": "5년",
+		 "specialty": "여행"}
+		]
+
+		var msg ="";
+		msg += "이름 : " + emp[0].name+"<br>" + "주소 : " + emp[0].address+"<br>" + "경력 : " + emp[0].career+"<br>"+ "취미 : " + emp[0].specialty;
+		
+		document.getElementById("result").innerHTML = msg;
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body onload="init()">
+ <h3> 자기소개</h3>
+ <hr>
+  <div id="result"></div>
+ </body>
+</html>

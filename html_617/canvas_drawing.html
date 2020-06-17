@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>캔버스 그리기</title>
+  <script>
+
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> 캔버스 그리기 맛보기 </h3>
+ <hr>
+ <canvas id="myCanvas" style="background-color:aliceblue" width="250" height="150"></canvas>	
+ <script>
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	// getContext("2d")가 리턴한 객체는 2차원 그래픽에 사용되는 
+	// 프로퍼티와 메소드를 가진 CanvasRenderingContext2D타입
+	// 객체 이다. 이것을 context 객체라고 부르기도 한다.
+	// 캔버스 객체는 2차원과 3차원을 모두 지원한다.
+	// 2차원은 canvas.getConetxt("2d")를
+	// 3차원은 canvas.getContext("webgl")를 호출하면 된다.
+	// webgl => Web Graphics Library 는 플러그인 도움없이
+	// 브라우저를 막론하고 2D/3D 차원의 그래픽을 지원하는 자바 스크립트 API 이다.
+	// getContext() => 컨버스에 그림을 그리는 컨택스트 객체 리턴
+
+	// 파란선으로 사각형 그리기
+	context.beginPath(); // 빈 경로 만들기
+	context.strokeStyle = "blue"; // 선 색 설정
+	context.rect(30,30,50,50); //(30,30)에서 50x50 크기 사각형을 경로에 삽입
+	context.stroke(); // 경로에 있는 모든 도형의 외곽선 그리기
+
+	// violet 색으로 채운 사각형 그리기
+	context.beginPath(); // 빈 경로 만들기
+	context.fillStyle = "violet"; // 채우기 색
+	context.rect(60,60,50,50); // (60,60)에서 50x50크기 사각형을 경로에 삽입
+	context.fill(); // 경로에 있는 모든 도형의 내부만 채워 그리기
+
+	// green 색으로 텍스트 내부만 그리기
+	context.font ="20px Gothic";
+	context.fillStyle= "green"; //채우기 색
+	context.fillText("Text in Canvas", 100, 50); // 텍스트를 경로에 넣지 않고 바로 그리기
+ </script>
+  
+ </body>
+</html>
