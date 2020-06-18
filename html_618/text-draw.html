@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> 텍스트 그리기</title>
+  <script>
+
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> 텍스트 그리기 </h3>
+ <hr>
+	<canvas id="myCanvas" style="background-color:aliceblue" width="500" height="400"></canvas>
+	<script>
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		context.strokeStyle ="blue";
+
+		// font프로퍼티 활용
+		for (var i = 0; i<4 ;i++ )
+		{
+			context.font = (10 + i*10)+"px forte";
+			context.strokeText("Javascript 재밌다." , 10, 30+i*50);
+		}
+
+		// 텍스트 외곽선 그리기
+		context.font="italic 50px forte";
+		context.strokeStyle = "magenta";
+		context.lineWidth = 3;
+		context.textAlign = "left";
+		context.strokeText("Javascript 재밌다.", 50, 250);
+
+		// 텍스트 채워 그리기
+		context.fillStyle= "green";
+		context.textAlign="right";
+		context.fillText("Javascript 재밌다.", 490,300);
+
+		/*
+			pixel(px) : 고정된 크기 단위(주로 컴퓨터 화면에서 사용됨)
+							크기가 조정이 안되는 단점이 있음
+			point(pt) : 고정된 크기 단위(주로 인쇄 매체에서 사용됨)
+							크기 조정 안됨
+			em : 웹 문서에서 사용되는 단위로 컴퓨터와 모바일등 다른  장치에서도 사용 크기 조정 가능
+			1em = 12pt =  16px 와 같음
+			(em 은 대문자 M 의 크기를 뜻함)
+
+			percent(%) : em과 비슷하게 다른 장치에 상대적으로 크기 조절 가능
+
+		*/
+	</script>
+ </body>
+</html>
