@@ -1,0 +1,95 @@
+이미지 로딩
+
+: 이미지가 출력되는 과정은
+
+1. 이미지 파일로부터 로딩하는 과정
+2. 로딩된 이미지가 출력되는 두 과정으로 나뉜다.
+
+	하지만 어떤 경우든 이미지 로딩이 완료된 후에야 이미지를 사용할 수
+	있다.
+
+<img> 태그와 Imgae 객체
+
+Image 객체는 <img> 태그에 의해 생성된 DOM 객체로서,
+자바스크립트 코드로 이미지를 다룰 수 있게 한다.
+
+* Image 객체의 프로퍼티
+
+	.src // 이미지 주소
+	.width // 이미지가 출력될 폭, 이미지가 로딩되면 이미지의
+			실제 폭으로 초기화
+	.height // 이미지가 출력될 높이, 이미지가 로딩되면 이미지의
+			실제 높이로 초기화
+	.complete // 이미지의 로딩이 완료되었는지 여부, true/false
+
+* 이미지 로딩 완료와 onload
+
+	<img id="myImg" src="apple.png" width="..." height="...">
+	
+	1. var myImg = document.getElementById("myImg");
+	// myImg는 Image 객체(<img>태그를 찾아 Image 객체를 알아낸다)
+
+	2. myImg.src ="banana.png"
+	// <img> 태그에 banana.png 이미지 출력
+	(Image 객체의 src 프로퍼티에 banana.png 파일명을 지정한다.)
+		
+	3. var width = myImg.width;
+	// width는 banana.png 이미지의 폭
+		(banana.png 이미지의 폭을 알아내는 한 줄 코드 추가)
+
+: 이미지 그리기
+
+* 이미지 객체 생성
+
+캔버스에 이미지를 그리기 위해서는
+이미지를 담을 이미지 객체가 필요하다.
+
+	var img = new Image();
+
+	img.onload = function() // 이미지 로딩이 완료되면 함수 코드 실행
+	{
+		...// 이곳에 img 객체에 로드된 이미지를 그리는 코드 작성
+	}
+
+	img.src = "test.png";
+		// img 객체에 test.png 파일로부터 이미지 로딩 시작
+
+이미지 로딩이 완료되어야 이미지를 그릴 수 있으므로,
+이미지 로딩을 지시하기 전 img.onload 리스너에
+이미지가 로딩되었을 때 이미지를 그리는
+자바스크립트 코드를 등록해둔다.
+
+: 이미지 그리기
+
+이미지 로딩이 완료되면 컨택스트 객체의 drawImage() 메소드를
+이용하여 이미지를 그린다.
+drawImage()는 다음 몇 가지 유형이 있다.
+
+1. 원본 크기로 그리기
+원본 이미지 크기 그대로 그리는 drawImage()는 다음과 같다.
+
+drawImage(img, dx, dy)
+	. img : 이미지 객체
+	. dx, dy : 이미지가 그려질 캔버스 좌표(dx, dy)
+	.
+	: img 객체에 든 비트맵 이미지를 원본 크기로 캔버스의
+		(dx, dy)위치에 그린다.
+
+2. 크기 조절하여 그리기
+: 원본 이미지의 크기를 조절하여 그리는 drawImage()는 다음과 같다.
+
+drawImage(img, dx, dy, dWidth, dHeight)
+	: dWidth, dHeight : 이미지가 그려지는 크기, dWidth X dHeight
+
+	: img 객체의 비트맵 이미지를 캔버스의 (dx, dy) 위치에 
+		dWidth X dHeight 크기로 변형하여 그린다.
+
+3. 원본의 일부분을 크기 조절하여 그리기
+: 원본 이미지의 일부분을 택하고 크기를 조절하여 그리는 drawImage()는 다음과 같다.
+
+drawImage(img, sx, sy, sWidth, sHeight, dx, dy, dWidht, dHeight)
+	: sx, sy : img 이미지 내 비트맵 좌표(sx, sy)
+	: sWidth, sHeight : 그리기 위해 선택한 img 내의 비트맵 크기, sWidth X sHeight
+
+	: img 이미지 내부의 (sx, sy)위치에서 sWidth, sHeight 영역의 비트맵을,
+	캔버스의 (dx, dy) 위치에 dWidth, dHeight 크기로 변형하여 그린다.
