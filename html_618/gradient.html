@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> 그라디언트 </title>
+  <script>
+	
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> 그라디언트 </h3>
+ <hr>
+	<canvas id="myCanvas" width="320" height="90" style="border:1px dotted #000;"></canvas>
+	<script>
+		var  c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+
+		// createLinearGradient(x1,x2,x3,x4);
+		// 인자 x1, y1 : 그라디언트를 적용할 면의 시작 축 좌표 입니다.
+		// 인자 x2, y2 : 그라디언트를 적용할 면의 종료 축 좌표 입니다.
+
+		var grd=ctx.createLinearGradient(0,0,300,0);
+		grd.addColorStop(0,"red");
+		grd.addColorStop("0.2","orange");
+		grd.addColorStop("0.3","yellow");
+		grd.addColorStop("0.4","green");
+		grd.addColorStop("0.6","blue");
+		grd.addColorStop("0.8","navy");
+		grd.addColorStop(1,"purple");
+		
+		ctx.fillStyle = grd;
+		ctx.font = "30px Arial";
+		ctx.fillText("Have a nice day today",10, 50);
+	</script>
+ </body>
+</html>

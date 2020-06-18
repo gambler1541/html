@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> 그라디언트 </title>
+  <script>
+
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> </h3>
+ <hr>
+  <canvas id="myCanvas1" width="200" height="100"></canvas>
+  <canvas id="myCanvas2" width="200" height="100"></canvas>
+  <canvas id="myCanvas3" width="200" height="100"></canvas>
+  <script>
+	var c = document.getElementById("myCanvas1");
+	var ctx = c.getContext("2d");
+
+	// Create gradient
+	var grd = ctx.createLinearGradient(0,0,160,0);
+	grd.addColorStop(0,"blue");
+	grd.addColorStop(0.5,"cyan");
+	grd.addColorStop(1,"white");
+
+	// Fill with gradient
+	ctx.fillStyle = grd;
+	ctx.fillRect(10,10,150,80);
+	// -------------------------------------------------
+	var c = document.getElementById("myCanvas2");
+	var ctx = c.getContext("2d");
+
+	//create gradient
+	var grd = ctx.createRadialGradient(75,30,5,75,30,100);
+	grd.addColorStop(0,"red");
+	grd.addColorStop(0.5,"green");
+	grd.addColorStop(1,"white");
+	// addColorStop() 메서드는
+	// 그라데이션 객체의 색상과 위치를 지정합니다.
+
+	// Fill With gradient
+	ctx.fillStyle = grd;
+	ctx.fillRect(10,10,150,80);
+
+	/*
+		createLinearGradient(시작점 x1, 시작점 y1, 끝점 x2, 끝점y2)
+					=> 선형 그라데이션 지정
+		
+		createRadialGradient(x1, y1, 첫번째 원의 반지름 r1, x2, y2, 두번째 원의 반지름 r2)
+					=> 원형 그라데이션 지정
+
+		addColorStop(오프셋, 색상) => 그라데이션 경계색 지정
+				/ 오프셋 : 0.0 에서 1.0까지의 색상의 상대적인 위치
+	*/
+
+	// Fill with gradient
+	ctx.fillStyle = grd;
+	ctx.fillRect(10,10,150,80);
+	// -----------------------------------------------
+
+	var c = document.getElementById("myCanvas3");
+	var ctx = c.getContext("2d");
+	
+	var grd = ctx.createLinearGradient(0,0,170, 80);
+	grd.addColorStop(0,"black");
+	grd.addColorStop(0.3,"magenta");
+	grd.addColorStop(0.5,"blue");
+	grd.addColorStop(0.6,"green");
+	grd.addColorStop(0.8,"yellow");
+	grd.addColorStop(1,"red");
+
+	ctx.fillStyle = grd;
+	ctx.fillRect(10,10,150,80);
+
+  </script>
+ </body>
+</html>
