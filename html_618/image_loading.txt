@@ -93,3 +93,68 @@ drawImage(img, sx, sy, sWidth, sHeight, dx, dy, dWidht, dHeight)
 
 	: img 이미지 내부의 (sx, sy)위치에서 sWidth, sHeight 영역의 비트맵을,
 	캔버스의 (dx, dy) 위치에 dWidth, dHeight 크기로 변형하여 그린다.
+
+* 마우스 이벤트 처리
+
+- 마우스가 눌러질 때, function down(e) 실행
+	: 마우스가 눌러지면 down(e) 함수가 실행되며,
+	미벤트 객체 e의 e.offsetX와 e.offsetY를 통해
+	캔버스 내 마우스가 눌러진 위치를 알 수 있다.
+
+	: 마우스가 눌러진 위치에서 드래깅하는 동안 그림을 그리기
+	때문에 마우스가 눌러진 위치를 전역변수 startX와 startY에 저장한다.
+
+	.startX = e.offsetX // 마우스가 눌러진 x 위치 저장
+	.startY = e.offsetY // 마우스가 눌러진 y 위치 저장
+
+	그리고 이제 드래깅을 통해 그림이 그려질 상태를 뜻하는 dragging 변수를 true로 설정한다.
+	: dragging = true;
+
+- 마우스가 놓여질 때, function up(e) 실행
+	:dragging = false;
+
+- 마우스가 움직일 때, function move(e)실행
+	마우스가 움직이는 동안 mousemove 이벤트가 계속 발생하여
+	move(e) 함수가 계속 호출된다.
+	: move(e)함수는 다음 코드를 이용하여 마우스가 눌려져 있지
+	않으면 그냥 리턴한다.
+
+	: if(!dragging) return;
+
+	: dragging이 true 라면 curX와 curY에 현재 마우스의 위치 값 e.offsetX 와 e.offsetY를 저장한다.
+
+	.curX = offsetX;
+	.curY = offsetY;
+
+	그리고 나서 (startX,startY)에서 (curX, curY)사이의 선을 그리도록 draw(curX, curY)를 호출한다.
+
+	: draw(curX, curY);
+
+	: (curX, curY)는 드래깅하는 동안 계속 변하는 마우스 커서의 현재 위치이다.
+
+	: startX, startY를 현재 마우스의 위치로 변경하고 함수를 빠져나온다.
+
+	. startX = curX;
+	. startY = curY;
+
+- 마우스가 캔버스를 벗어날 때, function out(e)를 실행
+	: 마우스가 캔버스를 벗어나면 그림 그리기를 중단시킨다.
+	이를 위해 out(e)함수에서는 다음과 같이 dragging 변수 값을 false로 설정한다.
+
+		:dragging = false;
+
+	* 그림 그리기, draw(curX, curY)
+	: 캔버스는 점 단위로 그래픽을 수행하는 기능은 없고
+	기본 단위가 선이다. 그러므로 한 픽셀의 점도 선으로 표현해야 한다.
+
+	: 이 Test에서 그림을 그리는 함수는 draw()이다.
+		: 이 함수를 호출하기전에 선의 시작점은 전역변수인 startX, startY에 저장하고,
+
+		. 끝 점 curX, curY를 매개변수로 하여 draw(curX, curY)를 호출하면 된다.
+
+	: 다음은 (startX, startY)에서 (curX, curY)까지 선을 그리는 draw() 함수 코드이다.
+
+	. context.beginPath(); // 새로운 경로 시작
+	. context.moveTo(startX, startY) // 새로운 시작점 추가
+	. context.lineTo(curX,curY) // 경로에 (startX,startY)에서 (curX, curY)사이의 선을 추가
+	. context.stroke(); // 경로 모두 그리기
