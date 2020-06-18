@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>addEventListener, removeEventListener</title>
+  <script>
+	var color1;
+	var color2;
+	var color3;
+	var btnExample;
+
+	window.onload = function() {
+		color1 = document.getElementById("green");
+		color2 = document.getElementById("red");
+		color3 = document.getElementById("cyan");
+		btnExample = document.getElementById("btnExample");
+		color1.addEventListener("mouseover",changecolor1);
+		color2.addEventListener("mouseover",changecolor2);
+		color3.addEventListener("mouseover",changecolor3);
+		btnExample.addEventListener("click",
+		btnExampleClickHandler);
+	}
+	function changecolor1(){  
+		s1.style.color = "green";
+	}
+	function changecolor2(){
+		s1.style.color = "red";
+	}
+	function changecolor3(){
+		s1.style.color = "cyan";
+	}
+	function btnExampleClickHandler(){
+		alert("메세지입니다. 저는 다시는 보이지 않습니다.");
+		btnExample.removeEventListener("click", btnExampleClickHandler);
+	}
+  </script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <h3> </h3>
+ <hr>
+  <h1 id="s1">change color</h1><br>
+  마우스만 올려도 색깔 바뀌는 버튼
+  <button id="green">green</button>
+  <button id="red">red</button>
+  <button id="cyan">cyan</button>
+  <button id="btnExample">한번만 메세지 띄우는 버튼</button>
+ </body>
+</html>
