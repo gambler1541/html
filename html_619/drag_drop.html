@@ -11,7 +11,7 @@
 	}
 	
 	function drag(ev){
-		ev.dataTrasnfer.setData("text", ev.target.id);
+		ev.dataTransfer.setData("text", ev.target.id);
 		// drop 이벤트가 발생하는 요소 id의 text(img1,img2...)를 지정함
 	}
 	
@@ -37,6 +37,32 @@
 		드래그 앤 드롭 이벤트를 위한 모든 이벤트 리스너 메소드(event listener method)는 DataTransfer객체를 반환합니다.
 
 		이렇게 반환된 DataTransfer객체는 드래그 앤 드롭 동작에 관한 정보를 가지고 있게 됩니다.
+
+		draggable 속성
+
+		웹 페이지 내의 모든 요소는 draggable 속성을 사용하여 드래그될 수 있는 객체(draggable object)로 변환될 수 있습니다.
+
+		ondragstart 속성
+
+		드래그될 수 있는 객체로 만든 후에는 ondargstart 속성을 통해 DataTransfer 객체의 setData()메소드를 호출합니다.
+
+		setData() 메소드는 드래그되는 대상 객체의 데이터(data)와 타입(data-type)을 설정합니다.
+
+		ondragover 속성
+
+		ondragover 속성은 드래그되는 대상 객체가 어느 요소 위에 놓일 수 있는 지를 설정합니다.
+
+		기본적으로 HTML 요소는 다른 요소의 위에 위치할 수 없습니다.
+
+		따라서 다른 요소 위에 위치할 수 있도록 만들기 위해서는 놓일 장소에 있는 요소의 기본 동작을 막아야만 합니다.
+
+		이 작업을 event.preventDefault() 메소드를 호출하는 것만으로 간단히 설정할 수 있습니다.
+
+		ondrop 속성
+		드래그하던 객체를 놓으면 drop 이벤트가 발생합니다.
+		
+		ondrop 속성을 이용하여 drop 이벤트에 대한 동작을 설정할 수 있습니다.
+
 	*/
   </script>
   <style>
@@ -56,6 +82,14 @@
  <body>
  <h3> Drag & Drop </h3>
  <hr>
-  
- </body>
+  <p>원하는 상품을 카트에 담으세요</p>
+  <div id="shopping_cart" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
+  <img src="../img/back1.jpg" alt="" id="img1" draggable="true" ondragstart="drag(event)">
+  <img src="../img/back2.jpg" alt="" id="img2" draggable="true" ondragstart="drag(event)">
+  <img src="../img/back3.jpg" alt="" id="img3" draggable="true" ondragstart="drag(event)">
+  <img src="../img/back4.jpg" alt="" id="img4" draggable="true" ondragstart="drag(event)">
+  <img src="../img/back5.jpg" alt="" id="img5" draggable="true" ondragstart="drag(event)">
+  <img src="../img/back6.jpg" alt="" id="img6" draggable="true" ondragstart="drag(event)"><br>
+  <div id="shopping_cart" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
+  </body>
 </html>
