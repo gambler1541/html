@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Drag & Drop</title>
+  <script>
+	function allowDrop(ev){
+		ev.preventDefault();
+		// 기본적으로 요소나 데이터는 다른 요소에 drop될수 없음
+		// drop이 가능하도록 요소의 기본적인 속성을 차단함
+	}
+	
+	function drag(ev){
+		ev.dataTrasnfer.setData("text", ev.target.id);
+		// drop 이벤트가 발생하는 요소 id의 text(img1,img2...)를 지정함
+	}
+	
+	function drop(ev){
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		// 저장한 text요소를 가져옴
+		ev.target.appendChild(document.getElementById(data));
+		// 가져온 text를 target에 추가
+	}
+	/* 
+		drag and drop API :
+		드래그 앤 드롭 API는 웹 페이지 내의 요소를 사용자가 자유롭게 드래그할 수 있또록 설정해 줍니다.
+
+		HTML5 이전에 이와 같은 기능을 구현하기 위해서는 엄청나게 많고 복잡한 스크립트를 작성해야 했습니다.
+
+		하지만 HTML5에서는 드래그 앤 드롭(drag and drop)기능이 표준 권고안에 포함되어 간단하게 사용할 수 있게 되었습니다.
+
+		현재 주요 웹 브라우저들은 모두 이 기능을 지원하며, 따라서 웹 페이지 내의 모든 요소는 드래그될 수 있습니다.
+
+		DataTransfer 객체
+
+		드래그 앤 드롭 이벤트를 위한 모든 이벤트 리스너 메소드(event listener method)는 DataTransfer객체를 반환합니다.
+
+		이렇게 반환된 DataTransfer객체는 드래그 앤 드롭 동작에 관한 정보를 가지고 있게 됩니다.
+	*/
+  </script>
+  <style>
+	#shopping_cart{
+		width : 610px;
+		height : 100px;
+		padding : 10px;
+		border : 1px dotted red;
+	}
+
+	img {
+		width : 100px;
+		height : 100px;
+	}
+  </style>
+ </head>
+ <body>
+ <h3> Drag & Drop </h3>
+ <hr>
+  
+ </body>
+</html>
